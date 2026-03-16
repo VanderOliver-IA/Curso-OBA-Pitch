@@ -60,7 +60,7 @@ body {
   gap: 8px;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 380px; /* Restringe a altura para exibir em torno de 7 itens por vez */
+  height: 330px; /* Ajustado para exibir 7 itens exatamente */
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.2) transparent;
 }
@@ -135,10 +135,10 @@ body {
 
 section { 
   position: relative; 
-  padding: 150px 0 100px 0; /* Pad top to push content nicely beneath the previous wave */
+  padding: 40px 0 100px 0; /* Começando o conteúdo colado no topo */
   min-height: 100vh;
   display: flex;
-  align-items: flex-start; /* Removed center so it starts from top */
+  align-items: flex-start; 
 }
 
 /* Cores de Fundo Alternadas */

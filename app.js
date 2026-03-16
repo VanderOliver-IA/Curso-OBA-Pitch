@@ -40,23 +40,19 @@
           if (link.getAttribute('href') === '#' + id) {
             link.classList.add('active');
             
-            // Auto-scroll the sidebar nav
+            // Auto-scroll logic for Sidebar (7-item window centering)
             if (link.closest('.sidebar-nav')) {
               const navContainer = link.closest('.sidebar-nav');
+              const containerHeight = navContainer.clientHeight;
               const linkOffsetTop = link.offsetTop;
               const linkHeight = link.offsetHeight;
-              const containerHeight = navContainer.offsetHeight;
-              const linksArr = Array.from(navContainer.querySelectorAll('a'));
-              const index = linksArr.indexOf(link);
               
-              if (index <= 3) {
-                 navContainer.scrollTo({ top: 0, behavior: 'smooth' });
-              } else {
-                navContainer.scrollTo({
-                  top: linkOffsetTop - (containerHeight / 2) + (linkHeight / 2),
-                  behavior: 'smooth'
-                });
-              }
+              const targetScrollTop = linkOffsetTop - (containerHeight / 2) + (linkHeight / 2);
+              
+              navContainer.scrollTo({
+                top: Math.max(0, targetScrollTop),
+                behavior: 'smooth'
+              });
             }
           }
         });
