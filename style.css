@@ -19,11 +19,24 @@
 
 /* ─── Base ───────────────────────────────────────────────── */
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Inter', sans-serif;
   background: var(--branco);
   overflow-x: hidden;
   display: flex;
 }
+
+.sidebar-nav {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+.sidebar-nav::-webkit-scrollbar { width: 4px; }
+.sidebar-nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+
 
 /* ═══════════════════════════════════════════
    SIDEBAR DINÂMICA
@@ -254,3 +267,103 @@ p { font-size: 1.1rem; line-height: 1.7; }
   40% { transform: translateY(-20px) translateX(-50%); }
   60% { transform: translateY(-10px) translateX(-50%); }
 }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVIDADE E MENU MOBILE
+════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  #sidebar {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 75vh;
+    border-radius: 25px 25px 0 0;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 2000;
+  }
+  #sidebar.mobile-active { transform: translateY(0); }
+  
+  #main-content {
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: 80px;
+  }
+  
+  section { padding: 80px 0; }
+  
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .hero-grid h1 { font-size: 3.5rem !important; }
+  
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    text-align: center;
+  }
+
+  .reveal-left, .reveal-right { transform: translateY(30px); opacity: 0; }
+  .reveal-left.visible, .reveal-right.visible { transform: translateY(0); opacity: 1; }
+  
+  .progress-container { display: none; }
+  #top-progress-bar { left: 0; width: 100%; }
+  
+  #metodologia > div > div > div, 
+  #financeiro > div > div {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .mobile-bottom-bar { display: flex !important; }
+}
+
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: white;
+  box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+  z-index: 1500;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cinza-texto);
+  font-size: 0.65rem;
+  font-weight: 700;
+  gap: 5px;
+  width: 60px;
+}
+.bottom-nav-item svg { width: 22px; height: 22px; stroke: var(--cinza-texto); transition: 0.3s; }
+
+.bottom-nav-center { position: relative; top: -25px; }
+
+.bottom-nav-center .center-btn {
+  width: 65px; height: 65px;
+  background: var(--amarelo); border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  box-shadow: 0 10px 20px rgba(255,193,7,0.4);
+}
+.bottom-nav-center .center-btn svg { stroke: var(--azul); width: 32px; height: 32px; }
+
+.bottom-nav-item.active, .mobile-nav-link.active { color: var(--turquesa); }
+.bottom-nav-item.active svg, .mobile-nav-link.active svg { stroke: var(--turquesa); }
+
+.mobile-menu-overlay {
+  display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+  background: rgba(0,0,0,0.6); z-index: 1999; opacity: 0; transition: opacity 0.3s;
+}
+.mobile-menu-overlay.active { display: block; opacity: 1; }

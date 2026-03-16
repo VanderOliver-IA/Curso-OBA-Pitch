@@ -5,7 +5,14 @@
   'use strict';
 
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.sidebar-nav a');
+  const navLinks = document.querySelectorAll('.sidebar-nav a, .mobile-nav-link');
+  const sidebar = document.getElementById('sidebar');
+  const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+
+  window.toggleMobileMenu = function() {
+    sidebar.classList.toggle('mobile-active');
+    mobileOverlay.classList.toggle('active');
+  };
   const progressBar = document.getElementById('main-progress');
   const pctText = document.getElementById('pct-text');
 
@@ -76,14 +83,23 @@
     revealObserver.observe(el);
   });
 
-  // ─── Interação do Menu ───────────────────────────────────
+  // ─── Smooth Scroll & Auto Close Mobile ───────────────────
   navLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
+    link.addEventListener('click', function(e) {
       e.preventDefault();
       const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const targetSec = document.querySelector(targetId);
+      if(targetSec) {
+        window.scrollTo({
+          top: targetSec.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+      
+      // Fecha o menu no mobile caso esteja aberto
+      if (window.innerWidth <= 900) {
+        sidebar.classList.remove('mobile-active');
+        mobileOverlay.classList.remove('active');
       }
     });
   });
