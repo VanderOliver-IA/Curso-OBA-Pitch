@@ -40,17 +40,23 @@
           if (link.getAttribute('href') === '#' + id) {
             link.classList.add('active');
             
-            // Auto-scroll the sidebar nav to center the active item
+            // Auto-scroll the sidebar nav
             if (link.closest('.sidebar-nav')) {
               const navContainer = link.closest('.sidebar-nav');
               const linkOffsetTop = link.offsetTop;
               const linkHeight = link.offsetHeight;
               const containerHeight = navContainer.offsetHeight;
+              const linksArr = Array.from(navContainer.querySelectorAll('a'));
+              const index = linksArr.indexOf(link);
               
-              navContainer.scrollTo({
-                top: linkOffsetTop - (containerHeight / 2) + (linkHeight / 2),
-                behavior: 'smooth'
-              });
+              if (index <= 3) {
+                 navContainer.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                navContainer.scrollTo({
+                  top: linkOffsetTop - (containerHeight / 2) + (linkHeight / 2),
+                  behavior: 'smooth'
+                });
+              }
             }
           }
         });
