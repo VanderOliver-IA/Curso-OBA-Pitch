@@ -35,15 +35,7 @@ body {
   display: flex;
 }
 
-.sidebar-nav {
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-bottom: 20px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.2) transparent;
-}
-.sidebar-nav::-webkit-scrollbar { width: 4px; }
-.sidebar-nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+
 
 
 /* ═══════════════════════════════════════════
@@ -62,11 +54,18 @@ body {
 }
 
 .sidebar-nav {
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 380px; /* Restringe a altura para exibir em torno de 7 itens por vez */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.2) transparent;
 }
+.sidebar-nav::-webkit-scrollbar { width: 4px; }
+.sidebar-nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
 
 .sidebar-nav a {
   padding: 12px 20px;

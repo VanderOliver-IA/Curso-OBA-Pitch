@@ -39,6 +39,19 @@
           link.classList.remove('active');
           if (link.getAttribute('href') === '#' + id) {
             link.classList.add('active');
+            
+            // Auto-scroll the sidebar nav to center the active item
+            if (link.closest('.sidebar-nav')) {
+              const navContainer = link.closest('.sidebar-nav');
+              const linkOffsetTop = link.offsetTop;
+              const linkHeight = link.offsetHeight;
+              const containerHeight = navContainer.offsetHeight;
+              
+              navContainer.scrollTo({
+                top: linkOffsetTop - (containerHeight / 2) + (linkHeight / 2),
+                behavior: 'smooth'
+              });
+            }
           }
         });
       }
