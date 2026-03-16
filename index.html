@@ -11,49 +11,62 @@
 </head>
 <body>
 
+<div id="top-progress-bar"><div id="top-progress-fill"></div></div>
+
 <aside id="sidebar">
   <div style="padding: 25px; text-align: center;">
     <img src="assets/logo-oba.png" alt="OBA" style="height: 60px;">
   </div>
   <nav class="sidebar-nav">
-    <a href="#intro" class="active"><span class="nav-num">01</span> Início</a>
-    <a href="#historia"><span class="nav-num">02</span> História</a>
-    <a href="#problema"><span class="nav-num">03</span> Problema</a>
-    <a href="#oportunidade"><span class="nav-num">04</span> Mercado</a>
-    <a href="#solucao"><span class="nav-num">05</span> Solução</a>
-    <a href="#cursos"><span class="nav-num">06</span> Cursos</a>
-    <a href="#metodologia"><span class="nav-num">07</span> Metodologia</a>
-    <a href="#plataforma"><span class="nav-num">08</span> Tecnologia</a>
-    <a href="#marketing"><span class="nav-num">09</span> Marketing</a>
-    <a href="#monetizacao"><span class="nav-num">10</span> Monetização</a>
-    <a href="#financeiro"><span class="nav-num">11</span> Financeiro</a>
-    <a href="#operacional"><span class="nav-num">12</span> O Time</a>
-    <a href="#divisao"><span class="nav-num">13</span> Divisão</a>
-    <a href="#roadmap"><span class="nav-num">14</span> Roadmap</a>
-    <a href="#final"><span class="nav-num">15</span> Conclusão</a>
+    <a href="#intro" class="active">Início</a>
+    <a href="#historia">História</a>
+    <a href="#problema">Problema</a>
+    <a href="#oportunidade">Mercado</a>
+    <a href="#solucao">Solução</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#metodologia">Metodologia</a>
+    <a href="#plataforma">Tecnologia</a>
+    <a href="#marketing">Marketing</a>
+    <a href="#monetizacao">Monetização</a>
+    <a href="#financeiro">Financeiro</a>
+    <a href="#operacional">O Time</a>
+    <a href="#divisao">Divisão</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#final">Conclusão</a>
   </nav>
   <div class="progress-container">
-    <div style="font-size: 0.7rem; margin-bottom: 5px; opacity: 0.6;">PROJETO COMPLETADO</div>
+    <div style="font-size: 0.7rem; margin-bottom: 5px; opacity: 0.8; display: flex; justify-content: space-between;">
+      <span>PROGRESSO</span>
+      <span style="color: var(--amarelo); font-weight: bold;">v1.00.01</span>
+    </div>
     <div class="progress-bar-bg">
       <div class="progress-bar-fill" id="main-progress"></div>
     </div>
-    <div style="font-size: 0.8rem; margin-top: 5px; font-weight: bold; color: var(--amarelo);" id="pct-text">0%</div>
+    <div style="font-size: 0.8rem; margin-top: 5px; font-weight: bold; color: var(--amarelo); text-align: center;" id="pct-text">0%</div>
   </div>
 </aside>
 
 <main id="main-content">
 
-  <!-- 01 INTRO (BRANCO) -->
-  <section id="intro" class="bg-branco">
+  <!-- 01 INTRO (HERO INTERATIVO) -->
+  <section id="intro" class="bg-animated-gradient" style="min-height: 100vh;">
     <div style="width: 85%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px;">
       <div class="reveal-left">
-        <h1 style="font-size: 4.5rem; line-height: 1; font-family: 'Nunito'; color: var(--azul);">A arte é para <span style="color: var(--laranja);">todos.</span></h1>
-        <p style="font-size: 1.5rem; margin-top: 20px;">Transformando a <strong>Oficina Belas Artes</strong> na maior plataforma digital de ensino artístico do país.</p>
-        <button onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})" style="margin-top: 30px; padding: 15px 40px; background: var(--azul); color: white; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; font-size: 1.1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">Ver Projeto ↓</button>
+        <h1 style="font-size: 4.8rem; line-height: 1.1; font-family: 'Nunito', sans-serif; color: white; text-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          A arte é para <span style="color: var(--amarelo);">todos.</span>
+        </h1>
+        <p style="font-size: 1.5rem; margin-top: 20px; color: rgba(255,255,255,0.9);">
+          Transformando a <strong>Oficina Belas Artes</strong> na maior plataforma digital de ensino artístico do país.
+        </p>
+        <button onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})" style="margin-top: 30px; padding: 18px 45px; background: var(--amarelo); color: var(--azul); border: none; border-radius: 50px; cursor: pointer; font-weight: 900; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: transform 0.3s ease;">Apresentação OBA ↓</button>
       </div>
       <div class="reveal-right">
-        <img src="assets/arty-1.png" class="arty-float" style="width: 100%; max-width: 500px;" alt="Arty">
+        <img src="assets/arty-1.png" class="arty-float" style="width: 100%; max-width: 500px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));" alt="Arty">
       </div>
+    </div>
+    
+    <div class="scroll-down-icon" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+      ⬇️
     </div>
     <div class="wave wave-bottom">
       <svg viewBox="0 0 1440 120" fill="var(--laranja)"><path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>

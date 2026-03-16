@@ -20,6 +20,8 @@
     const scrollPercent = Math.min((window.scrollY / totalScroll) * 100, 100);
     
     if (progressBar) progressBar.style.width = scrollPercent + '%';
+    const topProgressBar = document.getElementById('top-progress-fill');
+    if (topProgressBar) topProgressBar.style.width = scrollPercent + '%';
     if (pctText) pctText.textContent = Math.round(scrollPercent) + '%';
 
     // Update Active Nav
