@@ -3,491 +3,1327 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>OBA Online — Espetáculo Estratégico</title>
+  <title>OBA Online — Pitch Estratégico V.1.01.00</title>
+  <meta name="description" content="Apresentação estratégica completa do projeto OBA Curso Online — Oficina Belas Artes Digital.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1.00.07">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1.01.00">
+  <style>
+    /* Expandable panels */
+    .expandable-panel { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+    .expandable-panel.expanded { max-height: 2000px; }
+    .expandable-toggle {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; border: 2px solid var(--turquesa);
+      color: var(--turquesa); padding: 8px 18px; border-radius: 30px;
+      font-weight: 700; font-size: 0.83rem; cursor: pointer;
+      margin-top: 16px; transition: all 0.2s;
+    }
+    .expandable-toggle:hover { background: var(--turquesa); color: white; }
+    .expandable-toggle.white { border-color: rgba(255,255,255,0.5); color: white; }
+    .expandable-toggle.white:hover { background: rgba(255,255,255,0.15); }
+  </style>
 </head>
 <body>
 
+<!-- PROGRESS BAR SUPERIOR -->
 <div id="top-progress-bar"><div id="top-progress-fill"></div></div>
 
+<!-- ═══════════════════════════════════════════
+     SIDEBAR
+════════════════════════════════════════════ -->
 <aside id="sidebar">
-  <div style="padding: 25px; text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <img src="assets/logo-oba.png" alt="OBA" style="width: 180px; max-width: 100%; object-fit: contain;">
-    <div style="background: var(--amarelo); color: var(--azul); padding: 4px 12px; border-radius: 12px; font-weight: 800; font-size: 0.8rem; margin-top: 15px; box-shadow: 0 5px 15px rgba(255,193,7,0.3);">V.1.00.07 (GOLD)</div>
+  <div class="sidebar-logo">
+    <img src="assets/logo-oba.png" alt="OBA — Oficina Belas Artes">
+    <div class="sidebar-badge">V.1.01.00 — STRATEGIC EDITION</div>
   </div>
   <nav class="sidebar-nav">
-    <a href="#intro" class="active">Início</a>
-    <a href="#historia">História</a>
-    <a href="#problema">Problema</a>
-    <a href="#oportunidade">Mercado</a>
-    <a href="#solucao">Solução</a>
-    <a href="#cursos">Cursos</a>
-    <a href="#metodologia">Metodologia</a>
-    <a href="#plataforma">Tecnologia</a>
-    <a href="#marketing">Marketing</a>
-    <a href="#monetizacao">Monetização</a>
-    <a href="#financeiro">Financeiro</a>
-    <a href="#operacional">O Time</a>
-    <a href="#divisao">Divisão</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#final">Conclusão</a>
+    <div class="sidebar-section-label">Apresentação</div>
+    <a href="#intro" class="active"><span class="nav-icon">🏠</span> Início</a>
+    <a href="#historia"><span class="nav-icon">📖</span> A História da OBA</a>
+    <a href="#problema"><span class="nav-icon">🔍</span> O Problema</a>
+    <a href="#mercado"><span class="nav-icon">📊</span> Mercado & Oportunidade</a>
+    <a href="#solucao"><span class="nav-icon">💡</span> A Solução</a>
+
+    <div class="sidebar-section-label">Estrutura</div>
+    <a href="#cursos"><span class="nav-icon">🎨</span> Estrutura dos Cursos</a>
+    <a href="#metodologia"><span class="nav-icon">📐</span> Metodologia de Ensino</a>
+    <a href="#materiais"><span class="nav-icon">📚</span> Materiais Didáticos</a>
+    <a href="#plataforma"><span class="nav-icon">💻</span> Plataforma & Tecnologia</a>
+
+    <div class="sidebar-section-label">Negócio</div>
+    <a href="#marketing"><span class="nav-icon">📣</span> Estratégia de Marketing</a>
+    <a href="#monetizacao"><span class="nav-icon">💰</span> Modelo de Negócio</a>
+    <a href="#financeiro"><span class="nav-icon">📈</span> Projeções Financeiras</a>
+
+    <div class="sidebar-section-label">Pessoas</div>
+    <a href="#equipe"><span class="nav-icon">👥</span> O Time do Projeto</a>
+    <a href="#societaria"><span class="nav-icon">⚖️</span> Estrutura Societária</a>
+
+    <div class="sidebar-section-label">Futuro</div>
+    <a href="#expansao"><span class="nav-icon">🚀</span> Expansão & Roadmap</a>
+    <a href="#riscos"><span class="nav-icon">🛡️</span> Riscos & Mitigação</a>
+    <a href="#encerramento"><span class="nav-icon">⭐</span> Conclusão</a>
   </nav>
   <div class="progress-container">
-    <div style="font-size: 0.75rem; margin-bottom: 5px; opacity: 0.8; text-align: center; font-weight: bold;">
-      <span>SUA JORNADA</span>
-    </div>
+    <div class="progress-label">SUA JORNADA</div>
     <div class="progress-bar-bg">
       <div class="progress-bar-fill" id="main-progress"></div>
     </div>
-    <div style="font-size: 0.8rem; margin-top: 5px; font-weight: bold; color: var(--amarelo); text-align: center;" id="pct-text">0%</div>
+    <div id="pct-text">0%</div>
   </div>
 </aside>
 
 <main id="main-content">
 
-  <section id="intro" class="bg-animated-gradient" style="min-height: 100vh; align-items: flex-start; padding-top: 60px;">
-    <div class="hero-grid" style="width: 85%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: flex-start; gap: 40px;">
-      <div class="reveal-left">
-        <img src="assets/logo-oba.png" alt="OBA Logo" style="width: 320px; max-width: 100%; margin-bottom: 30px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5));">
-        <h1 style="font-size: 4.8rem; line-height: 1.1; font-family: 'Nunito', sans-serif; color: white; text-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-          A arte é para <span style="color: var(--amarelo);">todos.</span>
-        </h1>
-        <p style="font-size: 1.5rem; margin-top: 20px; color: rgba(255,255,255,0.9);">
-          Transformando a <strong>Oficina Belas Artes</strong> na maior plataforma digital de ensino artístico do país.
+<!-- ═══════════════════════════════════════════
+     01 — HERO / INTRODUÇÃO
+════════════════════════════════════════════ -->
+<section id="intro" class="bg-hero">
+  <div class="hero-grid">
+    <div class="reveal-left">
+      <div class="tag tag-white">Apresentação Estratégica Confidencial</div>
+      <h1 class="hero-title">
+        A arte é para <span class="highlight">todos.</span><br>
+        O negócio é para <span class="highlight">escalar.</span>
+      </h1>
+      <p class="hero-desc">
+        A <strong>Oficina Belas Artes (OBA)</strong> está se transformando na maior plataforma de ensino artístico do Brasil. 
+        Este documento apresenta o projeto completo — do conceito à estratégia de crescimento.
+      </p>
+      <button class="hero-cta-btn" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+        Conhecer o Projeto ↓
+      </button>
+      <div class="hero-stats-row">
+        <div class="hero-stat">
+          <div class="num">2</div>
+          <div class="lbl">Unidades físicas<br>no Rio de Janeiro</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">7+</div>
+          <div class="lbl">Técnicas artísticas<br>já ensinadas</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">R$8B+</div>
+          <div class="lbl">Mercado EdTech<br>brasileiro (2024)</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="num">∞</div>
+          <div class="lbl">Potencial de<br>escala digital</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-right" style="text-align:center;">
+      <img src="assets/arty-1.png" class="arty-float" style="max-width:420px; width:100%; filter: drop-shadow(0 20px 50px rgba(0,0,0,0.4));" alt="Arty mascote OBA">
+    </div>
+  </div>
+  <div class="scroll-down-icon" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="var(--off-white)" preserveAspectRatio="none"><path d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     02 — A HISTÓRIA DA OBA
+════════════════════════════════════════════ -->
+<section id="historia" class="bg-off">
+  <div class="section-inner">
+    <div class="historia-grid">
+      <div class="reveal-left" style="text-align:center;">
+        <img src="assets/arty-2.png" class="arty-float" style="max-width:380px; width:100%;" alt="Arty história">
+      </div>
+      <div class="reveal-right">
+        <div class="tag tag-primary">Quem Somos</div>
+        <h2 class="section-title">A origem da<br><span style="color:var(--turquesa)">Oficina Belas Artes</span></h2>
+        <div class="accent-bar"></div>
+        <p class="section-subtitle" style="color:var(--cinza-medio);">
+          A OBA nasceu com um propósito claro e inabalável: provar que <strong>qualquer pessoa pode aprender arte</strong> com a metodologia certa.
         </p>
-        <button onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})" style="margin-top: 30px; padding: 18px 45px; background: var(--amarelo); color: var(--azul); border: none; border-radius: 50px; cursor: pointer; font-weight: 900; font-size: 1.2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: transform 0.3s ease;">Apresentação OBA ↓</button>
-      </div>
-      <div class="reveal-right">
-        <img src="assets/arty-1.png" class="arty-float" style="width: 100%; max-width: 500px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));" alt="Arty">
-      </div>
-    </div>
-    
-    <div class="scroll-down-icon" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-    </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--laranja)"><path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
-    </div>
-  </section>
-
-  <!-- 02 HISTÓRIA (LARANJA) -->
-  <section id="historia" class="bg-laranja">
-    <div style="width: 85%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px;">
-      <div class="reveal-left">
-        <img src="assets/arty-2.png" class="arty-float" style="width: 100%; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));" alt="Arty História">
-      </div>
-      <div class="reveal-right">
-        <h2 style="font-size: 3.5rem;">A História da OBA</h2>
-        <p style="margin-top: 20px;">Com unidades físicas no Méier e Tijuca (RJ), a Oficina Belas Artes provou que qualquer pessoa pode evoluir artisticamente com o método certo.</p>
-        <div style="background: rgba(0,0,0,0.1); padding: 25px; border-radius: 20px; margin-top: 30px; border-left: 8px solid var(--amarelo); color: white;">
-          <strong>O Diferencial:</strong> A OBA é o ativo. Não dependemos de um único "rosto", mas de uma metodologia consolidada e múltiplos especialistas.
-        </div>
-      </div>
-    </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--branco)"><path d="M0,96L120,85.3C240,75,480,53,720,53.3C960,53,1200,75,1320,85.3L1440,96L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path></svg>
-    </div>
-  </section>
-
-  <!-- 03 PROBLEMA (BRANCO) -->
-  <section id="problema" class="bg-branco">
-    <div style="width: 85%; margin: 0 auto; text-align: center;">
-      <h2 class="reveal" style="font-size: 3.5rem; color: var(--laranja);">O Problema</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px;">
-        <div class="reveal" style="background: var(--azul); color: white; padding: 40px; border-radius: 30px; box-shadow: 0 15px 35px rgba(26,35,126,0.2);">
-          <div style="font-size: 3rem; margin-bottom: 20px;">🧩</div>
-          <h3>Conteúdo Desorganizado</h3>
-          <p style="font-size: 0.9rem; opacity: 0.8;">Mercado poluído com cursos sem trilha clara de evolução.</p>
-        </div>
-        <div class="reveal delay-1" style="background: var(--laranja); color: white; padding: 40px; border-radius: 30px; box-shadow: 0 15px 35px rgba(255,109,0,0.2);">
-          <div style="font-size: 3rem; margin-bottom: 20px;">👤</div>
-          <h3>Dependência de "Rostos"</h3>
-          <p style="font-size: 0.9rem; opacity: 0.8;">A maioria dos cursos morre se o "influencer" para de postar.</p>
-        </div>
-        <div class="reveal delay-2" style="background: var(--amarelo); color: var(--cinza-texto); padding: 40px; border-radius: 30px; box-shadow: 0 15px 35px rgba(255,193,7,0.2);">
-          <div style="font-size: 3rem; margin-bottom: 20px;">📉</div>
-          <h3>Baixa Retenção</h3>
-          <p style="font-size: 0.9rem; opacity: 0.8;">Cursos chatos e estáticos que não motivam o aluno a terminar.</p>
-        </div>
-      </div>
-    </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--azul)"><path d="M0,32L80,37.3C160,43,320,53,480,53.3C640,53,800,43,960,37.3C1120,32,1280,32,1360,32L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
-    </div>
-  </section>
-
-  <!-- 04 MERCADO (AZUL) -->
-  <section id="oportunidade" class="bg-azul">
-    <div style="width: 85%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px;">
-      <div class="reveal-left">
-        <h2 style="font-size: 3.5rem; color: var(--amarelo);">Mercado & Oportunidade</h2>
-        <p style="font-size: 1.3rem; margin-top: 20px;">Explosão das EdTechs no Brasil. Mais de 40 milhões de pessoas querem aprender arte, mas faltam escolas digitais profissionais.</p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px;">
-          <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center;">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--amarelo);">R$ 8B+</div>
-            <div style="font-size: 0.7rem; opacity: 0.6;">Mercado EdTech 2024</div>
+        <div class="timeline">
+          <div class="timeline-item reveal delay-1">
+            <div class="timeline-dot">🎨</div>
+            <div class="timeline-content">
+              <h4>Esboço Artes — A Semente</h4>
+              <p>O projeto começa com a visão de democratizar o ensino artístico no Rio de Janeiro. Escola física com metodologia inclusiva e DNA artístico forte.</p>
+            </div>
           </div>
-          <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center;">
-            <div style="font-size: 2rem; font-weight: 800; color: var(--turquesa);">15% a.a</div>
-            <div style="font-size: 0.7rem; opacity: 0.6;">Crescimento Anual</div>
+          <div class="timeline-item reveal delay-2">
+            <div class="timeline-dot">🏛️</div>
+            <div class="timeline-content">
+              <h4>Oficina Belas Artes (OBA) — Rebranding e Crescimento</h4>
+              <p>Expansão para 2 unidades físicas: <strong>Méier e Tijuca (RJ)</strong>. A marca se consolida como referência em ensino artístico inclusivo, técnico e acessível.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal delay-3">
+            <div class="timeline-dot">💻</div>
+            <div class="timeline-content">
+              <h4>OBA Online — O Próximo Salto</h4>
+              <p>A metodologia comprovada de uma escola física sendo transformada em uma <strong>plataforma digital escalável</strong>, disponível para qualquer pessoa no Brasil e no mundo.</p>
+            </div>
           </div>
         </div>
+        <div class="highlight-box" style="margin-top:28px;">
+          <p style="margin:0; font-size:0.95rem;"><strong>O Grande Diferencial:</strong> A OBA é o <em>ativo</em>. Não dependemos de um único professor ou "rosto". 
+          A metodologia pertence à escola — e a escola pertence ao futuro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#1A237E" preserveAspectRatio="none"><path d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     03 — O PROBLEMA
+════════════════════════════════════════════ -->
+<section id="problema" class="bg-azul">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-white">O Problema</div>
+      <h2 class="section-title">O mercado de arte online<br>está <span style="color:var(--amarelo)">quebrado</span></h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.8); margin:20px auto 0;">
+        Existem milhares de pessoas que querem aprender a desenhar — mas os cursos disponíveis falham em 4 pontos críticos.
+      </p>
+    </div>
+    <div class="problema-grid" style="--card-bg: rgba(255,255,255,0.08);">
+      <div class="info-card-dark reveal delay-1">
+        <div class="problema-icon">🧩</div>
+        <h3 style="color:var(--amarelo); font-size:1.1rem; margin:0 0 10px;">Conteúdo Desorganizado</h3>
+        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; line-height:1.7; margin:0;">
+          Cursos aleatórios sem trilha evolutiva clara. O aluno não sabe por onde começar nem para onde vai. 
+          O mercado está poluído com tutoriais soltos que não geram evolução real.
+        </p>
+      </div>
+      <div class="info-card-dark reveal delay-2">
+        <div class="problema-icon">👤</div>
+        <h3 style="color:var(--amarelo); font-size:1.1rem; margin:0 0 10px;">Dependência de "Rostos"</h3>
+        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; line-height:1.7; margin:0;">
+          A maioria dos cursos depende do influencer que os criou. Se esse criador para de postar, 
+          o curso perde valor, a audiência some e o negócio entra em colapso imediatamente.
+        </p>
+      </div>
+      <div class="info-card-dark reveal delay-3">
+        <div class="problema-icon">😶</div>
+        <h3 style="color:var(--amarelo); font-size:1.1rem; margin:0 0 10px;">Barreira Geográfica Alta</h3>
+        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; line-height:1.7; margin:0;">
+          Quem não mora perto de uma boa escola de arte fica sem acesso ao aprendizado estruturado. 
+          O talento não deveria ser limitado pela localização geográfica.
+        </p>
+      </div>
+      <div class="info-card-dark reveal delay-4">
+        <div class="problema-icon">📉</div>
+        <h3 style="color:var(--amarelo); font-size:1.1rem; margin:0 0 10px;">Baixa Taxa de Conclusão</h3>
+        <p style="color:rgba(255,255,255,0.75); font-size:0.88rem; line-height:1.7; margin:0;">
+          Sem gamificação, comunidade ou exercícios práticos integrados, os alunos abandonam os cursos 
+          antes de alcançar resultados. O "vale do desespero" artístico é real.
+        </p>
+      </div>
+      <div class="info-card-dark reveal delay-5" style="grid-column:1/-1;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center;">
+          <div>
+            <h3 style="color:var(--amarelo); margin:0 0 12px;">A Dor Real do Mercado</h3>
+            <p style="color:rgba(255,255,255,0.8); font-size:0.92rem; line-height:1.8; margin:0;">
+              Existe uma enorme parcela de pessoas que <strong style="color:white">querem aprender a desenhar</strong>, 
+              têm acesso à internet e <strong style="color:white">dinheiro para investir</strong> — mas não encontram 
+              um produto que combine <strong style="color:var(--amarelo)">metodologia de escola real</strong> com 
+              <strong style="color:var(--turquesa-light)">conveniência digital</strong>. 
+              Esse é o gap de mercado que a OBA Online preenche.
+            </p>
+          </div>
+          <div>
+            <img src="assets/arty-3.png" style="width:100%; max-width:250px; display:block; margin:0 auto;" alt="Arty problema">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="var(--off-white)" preserveAspectRatio="none"><path d="M0,32L80,37.3C160,43,320,53,480,53.3C640,53,800,43,960,37.3C1120,32,1280,32,1360,32L1440,32L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     04 — MERCADO & OPORTUNIDADE
+════════════════════════════════════════════ -->
+<section id="mercado" class="bg-off">
+  <div class="section-inner">
+    <div class="mercado-grid">
+      <div class="reveal-left">
+        <div class="tag tag-primary">Oportunidade de Mercado</div>
+        <h2 class="section-title">A oportunidade<br>é <span style="color:var(--turquesa)">gigante</span></h2>
+        <div class="accent-bar"></div>
+        <p style="color:var(--cinza-medio); line-height:1.8; margin-bottom:20px;">
+          O mercado de educação online no Brasil cresceu de forma exponencial nos últimos anos. 
+          O nicho de cursos de arte e desenho ainda é amplamente inexplorado por plataformas 
+          com <strong>metodologia profissional estruturada</strong>.
+        </p>
+        <p style="color:var(--cinza-medio); line-height:1.8; margin-bottom:24px;">
+          A OBA Online entra nesse mercado com um diferencial que nenhum concorrente possui: 
+          a <strong>autoridade de uma escola física com histórico comprovado</strong>, traduzida para o digital.
+        </p>
+        <div class="highlight-box">
+          <p style="margin:0; font-size:0.9rem;">
+            <strong>Referência analisada:</strong> KidsArtStudio.com.br — curso adquirido para análise 
+            completa de estrutura, preços e experiência do aluno. Os pontos fracos desse modelo 
+            são os <strong>pontos fortes da OBA</strong>.
+          </p>
+        </div>
+        <div class="highlight-box yellow" style="margin-top:14px;">
+          <p style="margin:0; font-size:0.9rem;">
+            <strong>Zero competidores diretos:</strong> Não existe, no mercado brasileiro, uma escola 
+            de arte online com metodologia de escola física real, trilhas evolutivas claras e comunidade artística integrada.
+          </p>
+        </div>
       </div>
       <div class="reveal-right">
-        <img src="assets/arty-3.png" class="arty-float" style="width: 100%;" alt="Arty Mercado">
-      </div>
-    </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--branco)"><path d="M0,64L48,74.7C96,85,192,107,288,106.7C384,107,480,85,576,69.3C672,53,768,43,864,48C960,53,1056,75,1152,80C1248,85,1344,75,1392,69.3L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path></svg>
-    </div>
-  </section>
-
-  <!-- 05 SOLUÇÃO (BRANCO) -->
-  <section id="solucao" class="bg-branco">
-    <div style="width: 85%; margin: 0 auto;">
-      <h2 class="reveal" style="font-size: 3.5rem; text-align: center; color: var(--azul);">OBA Online — A Solução</h2>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; align-items: center;">
-        <div class="reveal-left">
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
-            <li style="background: #F7FAFC; padding: 20px; border-radius: 15px; display: flex; gap: 20px; align-items: center; border-left: 8px solid var(--turquesa);">
-              <span style="font-size: 2rem;">🗺️</span>
-              <div>
-                <strong>Trilhas de Evolução</strong>
-                <p style="font-size: 0.8rem; opacity: 0.7;">O aluno sempre sabe onde está e para onde vai.</p>
-              </div>
-            </li>
-            <li style="background: #F7FAFC; padding: 20px; border-radius: 15px; display: flex; gap: 20px; align-items: center; border-left: 8px solid var(--laranja);">
-              <span style="font-size: 2rem;">🎮</span>
-              <div>
-                <strong>Gamificação (Duolingo Style)</strong>
-                <p style="font-size: 0.8rem; opacity: 0.7;">Medalhas, ofensivas e desafios constantes.</p>
-              </div>
-            </li>
-            <li style="background: #F7FAFC; padding: 20px; border-radius: 15px; display: flex; gap: 20px; align-items: center; border-left: 8px solid var(--amarelo);">
-              <span style="font-size: 2rem;">🛡️</span>
-              <div>
-                <strong>Segurança Operacional</strong>
-                <p style="font-size: 0.8rem; opacity: 0.7;">Contratos que garantem a posse do conteúdo pela plataforma.</p>
-              </div>
-            </li>
+        <div class="mercado-numbers">
+          <div class="mercado-card">
+            <div class="mercado-num">R$8B+</div>
+            <div class="mercado-lbl">Mercado EdTech Brasil 2024</div>
+          </div>
+          <div class="mercado-card">
+            <div class="mercado-num" style="color:var(--azul);">40M+</div>
+            <div class="mercado-lbl">Pessoas interessadas em aprender arte online no Brasil</div>
+          </div>
+          <div class="mercado-card">
+            <div class="mercado-num">15%</div>
+            <div class="mercado-lbl">Crescimento anual do setor de cursos online</div>
+          </div>
+          <div class="mercado-card">
+            <div class="mercado-num" style="color:var(--laranja);">Zero</div>
+            <div class="mercado-lbl">Escolas online com metodologia de escola física real e trilha evolutiva</div>
+          </div>
+        </div>
+        <div class="info-card" style="margin-top:20px;">
+          <h4 style="color:var(--turquesa); margin:0 0 12px; font-size:1rem;">🎯 Público-Alvo Principal Online</h4>
+          <ul style="color:var(--cinza-texto); font-size:0.85rem; line-height:2; margin:0; padding-left:20px;">
+            <li>Adolescentes (13–17) fãs de anime e mangá</li>
+            <li>Jovens adultos (18–30) criativos e designers iniciantes</li>
+            <li>Adultos (30–50) que querem arte como hobby ou carreira</li>
+            <li>Iniciantes que acreditam que "não sabem desenhar"</li>
           </ul>
         </div>
-        <div class="reveal-right" style="text-align: center;">
-          <img src="assets/arty-1.png" style="width: 80%;" alt="Arty Solução">
-        </div>
       </div>
     </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--amarelo)"><path d="M0,32L80,37.3C160,43,320,53,480,58.7C640,64,800,64,960,53.3C1120,43,1280,21,1360,10.7L1440,0L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
-    </div>
-  </section>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#1A237E" preserveAspectRatio="none"><path d="M0,56L80,48C160,40,320,24,480,21.3C640,19,800,35,960,42.7C1120,51,1280,61,1360,66.7L1440,72L1440,100L0,100Z"/></svg>
+  </div>
+</section>
 
-  <!-- 06 CURSOS (AMARELO) -->
-  <section id="cursos" class="bg-amarelo">
-    <div style="width: 85%; margin: 0 auto; text-align: center;">
-      <h2 class="reveal" style="font-size: 3.5rem;">Estrutura dos Cursos</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 50px;">
-        <div class="reveal" style="background: white; padding: 30px; border-radius: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
-          <h4 style="color: var(--azul);">NÍVEL 1</h4>
-          <h3>Iniciantes</h3>
-          <p style="font-size: 0.8rem; margin-top: 10px;">Fundamentos do desenho, coordenação motora e formas básicas.</p>
-        </div>
-        <div class="reveal delay-1" style="background: var(--azul); color: white; padding: 30px; border-radius: 25px;">
-          <h4 style="color: var(--amarelo);">NÍVEL 2</h4>
-          <h3>Intermediário</h3>
-          <p style="font-size: 0.8rem; margin-top: 10px;">Mangá, Realismo, Cartoon e técnicas de colorização.</p>
-        </div>
-        <div class="reveal delay-2" style="background: var(--laranja); color: white; padding: 30px; border-radius: 25px;">
-          <h4 style="color: white;">NÍVEL 3</h4>
-          <h3>Especialização</h3>
-          <p style="font-size: 0.8rem; margin-top: 10px;">Retrato Realista, HQ e Ilustração Digital Profissional.</p>
-        </div>
-      </div>
-    </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--branco)"><path d="M0,0L120,10.7C240,21,480,43,720,48C960,53,1200,43,1320,37.3L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path></svg>
-    </div>
-  </section>
-
-  <!-- 07 METODOLOGIA (BRANCO) -->
-  <section id="metodologia" class="bg-branco">
-    <div style="width: 85%; margin: 0 auto;">
-      <h2 class="reveal" style="font-size: 3.5rem; text-align: center; color: var(--azul);">Metodologia — Jornada OBA</h2>
-      <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 60px;">
-        <div style="display: flex; gap: 20px; justify-content: space-around;">
-          <div class="reveal" style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; background: var(--turquesa); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 2.5rem; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));">▶️</div>
-            <strong>Aulas em Vídeo</strong>
-            <p style="font-size: 0.7rem; opacity: 0.6;">Direto ao ponto, didáticas e técnicas.</p>
-          </div>
-          <div class="reveal delay-1" style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; background: var(--amarelo); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 2.5rem; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));">✏️</div>
-            <strong>Exercícios Reais</strong>
-            <p style="font-size: 0.7rem; opacity: 0.6;">Fixação através da prática contínua.</p>
-          </div>
-          <div class="reveal delay-2" style="text-align: center; width: 180px;">
-            <div style="width: 100px; height: 100px; background: var(--laranja); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 2.5rem; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));">🏅</div>
-            <strong>Gamificação</strong>
-            <p style="font-size: 0.7rem; opacity: 0.6;">Medalhas e rankings inspirados no Duolingo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--turquesa)"><path d="M0,96L80,85.3C160,75,320,53,480,53.3C640,53,800,75,960,85.3L1120,96L1440,96L1440,120L1120,120C960,120,800,120,640,120C480,120,160,120,80,120L0,120Z"></path></svg>
-    </div>
-  </section>
-
-  <!-- 08 TECNOLOGIA (TURQUESA) -->
-  <section id="plataforma" class="bg-turquesa">
-    <div style="width: 85%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px;">
+<!-- ═══════════════════════════════════════════
+     05 — A SOLUÇÃO
+════════════════════════════════════════════ -->
+<section id="solucao" class="bg-azul">
+  <div class="section-inner">
+    <div class="solucao-grid">
       <div class="reveal-left">
-        <h2 style="font-size: 3.5rem;">Tecnologia & Plataforma</h2>
-        <div style="background: white; color: var(--cinza-texto); padding: 30px; border-radius: 20px; border-left: 10px solid var(--azul); margin-top: 30px;">
-          <h3 style="color: var(--azul);">Fase 1: Hotmart (Lançamento URGENTE)</h3>
-          <p style="font-size: 0.9rem; margin-top: 10px;">Checkout integrado e infra pronta para agir rápido sem travar a operação.</p>
+        <div class="tag tag-primary">A Solução</div>
+        <h2 class="section-title">OBA Online:<br>a escola digital<br>da <span style="color:var(--turquesa)">Oficina Belas Artes</span></h2>
+        <div class="accent-bar"></div>
+        <p style="color:rgba(255,255,255,0.85); line-height:1.8; margin-bottom:24px;">
+          A OBA Online <strong>não é "mais um curso de desenho"</strong>. É a metodologia comprovada de uma 
+          escola física, estruturada em uma plataforma digital escalável — com trilhas evolutivas, 
+          comunidade ativa e a mascote Arty como guia.
+        </p>
+        <div class="diferencial-list">
+          <div class="diferencial-item reveal delay-1">
+            <div class="diferencial-icon">🏫</div>
+            <div>
+              <strong>Marca, não professor</strong>
+              <small>A OBA é o ativo. Professores são especialistas convidados — o negócio <em>não depende</em> de um rosto. A metodologia pertence à escola.</small>
+            </div>
+          </div>
+          <div class="diferencial-item reveal delay-2">
+            <div class="diferencial-icon">🗺️</div>
+            <div>
+              <strong>Trilha evolutiva clara — 3 níveis</strong>
+              <small>O aluno sempre sabe onde está e para onde vai. Do fundamento ao especialista, com progressão lógica e motivadora.</small>
+            </div>
+          </div>
+          <div class="diferencial-item reveal delay-3">
+            <div class="diferencial-icon">🤝</div>
+            <div>
+              <strong>Comunidade artística ativa</strong>
+              <small>Espaço para postar desenhos, receber feedback, participar de desafios e se conectar com outros artistas.</small>
+            </div>
+          </div>
+          <div class="diferencial-item reveal delay-4">
+            <div class="diferencial-icon">🎮</div>
+            <div>
+              <strong>Gamificação estilo Duolingo</strong>
+              <small>Medalhas, ofensivas, rankings e desafios constantes para manter o aluno engajado além da sala de aula.</small>
+            </div>
+          </div>
+          <div class="diferencial-item reveal delay-5">
+            <div class="diferencial-icon">📱</div>
+            <div>
+              <strong>Modular e flexível</strong>
+              <small>Compre um módulo, um curso completo ou acesso vitalício — o aluno decide seu ritmo e investimento.</small>
+            </div>
+          </div>
         </div>
-        <div style="background: white; color: var(--cinza-texto); padding: 30px; border-radius: 20px; border-left: 10px solid var(--amarelo); margin-top: 20px; opacity: 0.8;">
-          <h3 style="color: var(--laranja);">Objetivo: Plataforma Própria</h3>
-          <p style="font-size: 0.9rem; margin-top: 10px;">Controle total da marca e dados, mesmo com maiores custos iniciais.</p>
+      </div>
+      <div class="reveal-right" style="text-align:center;">
+        <img src="assets/arty-4.png" style="max-height:480px; width:auto; filter: drop-shadow(0 10px 40px rgba(0,168,150,0.3));" alt="Arty solução">
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="var(--branco)" preserveAspectRatio="none"><path d="M0,24L60,32C120,40,240,56,360,58.7C480,61,600,51,720,45.3C840,40,960,40,1080,45.3C1200,51,1320,61,1380,66.7L1440,72L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     06 — ESTRUTURA DOS CURSOS
+════════════════════════════════════════════ -->
+<section id="cursos" class="bg-branco">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-primary">Currículo</div>
+      <h2 class="section-title">Estrutura pedagógica<br>dos cursos</h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:var(--cinza-medio); margin:20px auto 0;">
+        3 níveis de evolução artística — do iniciante absoluto ao especialista profissional.
+      </p>
+    </div>
+    <div class="niveis-grid">
+      <div class="nivel-card n1 reveal delay-1">
+        <div class="nivel-num">1</div>
+        <div class="nivel-badge">Nível 1</div>
+        <h3>Fundamentos do Desenho</h3>
+        <p>Para quem está começando do zero. Qualquer pessoa consegue evoluir.</p>
+        <ul class="nivel-cursos">
+          <li>Fundamentos do Desenho</li>
+          <li>Coordenação Motora Artística</li>
+          <li>Linhas e Formas</li>
+          <li>Perspectiva Básica</li>
+          <li>Sombras Básicas</li>
+        </ul>
+      </div>
+      <div class="nivel-card n2 reveal delay-2">
+        <div class="nivel-num">2</div>
+        <div class="nivel-badge">Nível 2</div>
+        <h3>Técnicas Artísticas</h3>
+        <p>O coração da OBA. Técnicas do mundo real, didáticas e progressivas.</p>
+        <ul class="nivel-cursos">
+          <li>Desenho Realista</li>
+          <li>Cartoon & HQ</li>
+          <li>Mangá</li>
+          <li>Criação de Personagens</li>
+          <li>Cenários & Ambientação</li>
+          <li>Luz e Sombra Avançado</li>
+          <li>Moda & Comunicação Visual</li>
+        </ul>
+      </div>
+      <div class="nivel-card n3 reveal delay-3">
+        <div class="nivel-num">3</div>
+        <div class="nivel-badge">Nível 3</div>
+        <h3>Especializações</h3>
+        <p>Para quem quer se profissionalizar ou dominar uma técnica específica.</p>
+        <ul class="nivel-cursos">
+          <li>Retrato Realista</li>
+          <li>Ilustração Profissional</li>
+          <li>Concept Art</li>
+          <li>História em Quadrinhos</li>
+          <li>Anatomia Avançada</li>
+          <li>Pintura em Tela (digital)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:50px;">
+      <h3 style="margin-bottom:20px; font-size:1.2rem; text-align:center; color:var(--cinza-texto);">Tipos de Formatos Disponíveis na Plataforma</h3>
+      <div class="tipos-grid">
+        <div class="tipo-card reveal delay-1">
+          <div class="tipo-icon">📚</div>
+          <h4>Formações Completas</h4>
+          <p>Curso completo em uma técnica inteira. Ex.: Formação em Desenho Realista OBA.</p>
+        </div>
+        <div class="tipo-card reveal delay-2">
+          <div class="tipo-icon">⚡</div>
+          <h4>Cursos Rápidos</h4>
+          <p>Cursos específicos: mãos, anatomia, expressões faciais, sombreamento.</p>
+        </div>
+        <div class="tipo-card reveal delay-3">
+          <div class="tipo-icon">🎤</div>
+          <h4>Masterclasses</h4>
+          <p>Artistas convidados especialistas em técnicas avançadas e mercado profissional.</p>
+        </div>
+        <div class="tipo-card reveal delay-4">
+          <div class="tipo-icon">🗺️</div>
+          <h4>Trilhas Temáticas</h4>
+          <p>Ex.: Trilha Mangá — Anatomia Anime → Personagens → Expressões → Narrativa Visual.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px; background:var(--off-white); border-radius:var(--radius-md); padding:32px;">
+      <h3 style="color:var(--azul); margin:0 0 20px;">📋 Exemplo: Curso Completo de Desenho Realista OBA</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:14px;">
+        <div style="background:white; border-radius:10px; padding:16px; border-left:4px solid var(--turquesa);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--turquesa); margin-bottom:6px;">Módulo 1</div>
+          <div style="font-size:0.9rem; font-weight:700;">Fundamentos do Realismo</div>
+        </div>
+        <div style="background:white; border-radius:10px; padding:16px; border-left:4px solid var(--laranja);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--laranja); margin-bottom:6px;">Módulo 2</div>
+          <div style="font-size:0.9rem; font-weight:700;">Luz e Sombra</div>
+        </div>
+        <div style="background:white; border-radius:10px; padding:16px; border-left:4px solid var(--amarelo);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--amarelo-dark); margin-bottom:6px;">Módulo 3</div>
+          <div style="font-size:0.9rem; font-weight:700;">Texturas</div>
+        </div>
+        <div style="background:white; border-radius:10px; padding:16px; border-left:4px solid var(--azul);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--azul); margin-bottom:6px;">Módulo 4</div>
+          <div style="font-size:0.9rem; font-weight:700;">Retrato Humano</div>
+        </div>
+        <div style="background:white; border-radius:10px; padding:16px; border-left:4px solid var(--turquesa);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--turquesa); margin-bottom:6px;">Módulo 5</div>
+          <div style="font-size:0.9rem; font-weight:700;">Figura Humana Completa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#1A237E" preserveAspectRatio="none"><path d="M0,48L80,42.7C160,37,320,27,480,26.7C640,27,800,37,960,42.7C1120,48,1280,48,1360,48L1440,48L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     07 — METODOLOGIA DE ENSINO
+════════════════════════════════════════════ -->
+<section id="metodologia" class="bg-azul">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-white">Como Ensinamos</div>
+      <h2 class="section-title">Metodologia que<br>garante <span style="color:var(--amarelo)">evolução real</span></h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.8); margin:20px auto 0;">
+        Cada detalhe da experiência foi pensado para que o aluno progrida de forma consistente e motivada.
+      </p>
+    </div>
+    <div class="jornada-flow">
+      <div class="jornada-step reveal delay-1">
+        <div class="jornada-circle">▶️</div>
+        <h4>Aula em Vídeo</h4>
+        <p>5 a 12 min<br>direto ao ponto</p>
+      </div>
+      <div class="jornada-arrow">→</div>
+      <div class="jornada-step reveal delay-2">
+        <div class="jornada-circle">✏️</div>
+        <h4>Exercício Prático</h4>
+        <p>Atividade para<br>fixar o conteúdo</p>
+      </div>
+      <div class="jornada-arrow">→</div>
+      <div class="jornada-step reveal delay-3">
+        <div class="jornada-circle">📄</div>
+        <h4>Material PDF</h4>
+        <p>Apostilas OBA<br>e referências</p>
+      </div>
+      <div class="jornada-arrow">→</div>
+      <div class="jornada-step reveal delay-4">
+        <div class="jornada-circle">💬</div>
+        <h4>Comentários</h4>
+        <p>Dúvidas direto<br>na aula</p>
+      </div>
+      <div class="jornada-arrow">→</div>
+      <div class="jornada-step reveal delay-5">
+        <div class="jornada-circle">🏅</div>
+        <h4>Certificado</h4>
+        <p>Certificado digital<br>ao concluir</p>
+      </div>
+    </div>
+    <div class="aula-cards">
+      <div class="aula-card reveal delay-1">
+        <div class="aula-num">5–12</div>
+        <h4>Minutos por Aula</h4>
+        <p>Ideal para encaixar na rotina sem perder qualidade</p>
+      </div>
+      <div class="aula-card reveal delay-2">
+        <div class="aula-num">3</div>
+        <h4>Partes por Aula</h4>
+        <p>Introdução → Demonstração → Exercício prático</p>
+      </div>
+      <div class="aula-card reveal delay-3">
+        <div class="aula-num">100%</div>
+        <h4>Progresso Rastreado</h4>
+        <p>Barra de progresso por módulo aumenta taxa de conclusão</p>
+      </div>
+    </div>
+    <div class="highlight-box white" style="margin-top:30px;">
+      <p style="color:rgba(255,255,255,0.9); margin:0; font-size:0.95rem;">
+        <strong style="color:var(--amarelo)">🎮 Gamificação (estilo Duolingo):</strong> Sistema de medalhas, níveis e desafios dentro da comunidade 
+        mantém o aluno engajado muito além da sala de aula. O objetivo é que a OBA se sinta como um 
+        <strong>game de evolução artística</strong> — onde cada aula concluída é uma conquista.
+      </p>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="var(--off-white)" preserveAspectRatio="none"><path d="M0,56L80,50.7C160,45,320,35,480,32C640,29,800,35,960,42.7C1120,51,1280,61,1360,66.7L1440,72L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     08 — MATERIAIS DIDÁTICOS
+════════════════════════════════════════════ -->
+<section id="materiais" class="bg-off">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-primary">Suporte ao Aluno</div>
+      <h2 class="section-title">Materiais Didáticos<br>& Apoio ao Aprendizado</h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:var(--cinza-medio); margin:20px auto 0;">
+        A OBA já possui apostilas físicas testadas em sala de aula. Esse material será digitalizado 
+        e integrado à plataforma para acelerar a evolução dos alunos.
+      </p>
+    </div>
+    <div class="materiais-grid">
+      <div class="material-card reveal delay-1">
+        <div class="material-icon">📖</div>
+        <h3>Apostilas OBA Digitais</h3>
+        <p>Material didático exclusivo desenvolvido pela escola ao longo dos anos de ensino físico. 
+           PDFs organizados por módulo com exercícios progressivos e referências artísticas.</p>
+      </div>
+      <div class="material-card reveal delay-2">
+        <div class="material-icon">🎯</div>
+        <h3>Exercícios Práticos</h3>
+        <p>Cada aula possui uma atividade prática correspondente. O aluno não apenas assiste — 
+           ele pratica imediatamente, fixando o aprendizado com a mão no papel.</p>
+      </div>
+      <div class="material-card reveal delay-3">
+        <div class="material-icon">🖼️</div>
+        <h3>Banco de Referências</h3>
+        <p>Coleção curada de referências artísticas organizadas por técnica e nível. 
+           O aluno sempre tem um guia visual para comparar seu progresso.</p>
+      </div>
+      <div class="material-card reveal delay-4">
+        <div class="material-icon">📹</div>
+        <h3>Aulas em Vídeo HD</h3>
+        <p>Vídeos de alta qualidade com disponibilidade para download offline. 
+           O aluno pode assistir no celular, tablet ou computador, onde quiser.</p>
+      </div>
+      <div class="material-card reveal delay-5">
+        <div class="material-icon">💬</div>
+        <h3>Comentários nas Aulas</h3>
+        <p>Sistema de perguntas e respostas diretamente em cada vídeo. Alunos interagem 
+           entre si e recebem suporte dos tutores e professores da OBA.</p>
+      </div>
+      <div class="material-card reveal" style="border-top-color:var(--amarelo);">
+        <div class="material-icon">🏆</div>
+        <h3>Certificado Digital</h3>
+        <p>Certificado gerado automaticamente ao concluir cada curso. 
+           Profissional, compartilhável no LinkedIn e reconhecido pela marca OBA.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#1A237E" preserveAspectRatio="none"><path d="M0,32L60,37.3C120,43,240,53,360,53.3C480,53,600,43,720,37.3C840,32,960,32,1080,37.3C1200,43,1320,53,1380,58.7L1440,64L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     09 — PLATAFORMA & TECNOLOGIA
+════════════════════════════════════════════ -->
+<section id="plataforma" class="bg-azul">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-primary">Tecnologia</div>
+      <h2 class="section-title">Estrutura da<br>plataforma digital</h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.8); margin:20px auto 0;">
+        Uma área de membros completa, projetada para motivar, reter e engajar o aluno em toda a jornada.
+      </p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; margin-bottom:40px;">
+      <div class="info-card reveal delay-1">
+        <div style="font-size:2.2rem; margin-bottom:14px;">🏠</div>
+        <h3 style="font-size:1.05rem; margin:0 0 10px;">Dashboard do Aluno</h3>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0; line-height:1.7;">"Continuar assistindo", cursos comprados, progresso geral e próximas aulas — tudo em uma tela limpa e motivadora.</p>
+      </div>
+      <div class="info-card reveal delay-2">
+        <div style="font-size:2.2rem; margin-bottom:14px;">▶️</div>
+        <h3 style="font-size:1.05rem; margin:0 0 10px;">Player de Aulas</h3>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0; line-height:1.7;">Vídeo de alta qualidade com download disponível, exercícios integrados e comentários por aula.</p>
+      </div>
+      <div class="info-card reveal delay-3">
+        <div style="font-size:2.2rem; margin-bottom:14px;">📊</div>
+        <h3 style="font-size:1.05rem; margin:0 0 10px;">Progresso Inteligente</h3>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0; line-height:1.7;">Sistema visual de progresso por módulo e curso completo. A barra de progresso aumenta a taxa de conclusão.</p>
+      </div>
+      <div class="info-card reveal delay-4">
+        <div style="font-size:2.2rem; margin-bottom:14px;">🏆</div>
+        <h3 style="font-size:1.05rem; margin:0 0 10px;">Gamificação</h3>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0; line-height:1.7;">Medalhas, badges e níveis. O aluno é recompensado a cada marco completado na sua jornada artística.</p>
+      </div>
+      <div class="info-card reveal delay-5">
+        <div style="font-size:2.2rem; margin-bottom:14px;">🎨</div>
+        <h3 style="font-size:1.05rem; margin:0 0 10px;">Comunidade Artística</h3>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0; line-height:1.7;">Feed de desenhos dos alunos, desafios semanais, feedback de professores e networking criativo.</p>
+      </div>
+      <div class="info-card reveal">
+        <div style="font-size:2.2rem; margin-bottom:14px;">📱</div>
+        <h3 style="font-size:1.05rem; margin:0 0 10px;">Acesso Multiplataforma</h3>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0; line-height:1.7;">Desktop, tablet e celular. O aluno aprende onde quiser, quando quiser, no seu próprio ritmo.</p>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:32px; border:1px solid rgba(255,255,255,0.15);">
+      <h3 style="color:var(--amarelo); margin:0 0 20px; font-size:1.1rem;">🛤️ Roadmap Tecnológico — 3 Fases</h3>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+        <div style="background:white; border-radius:10px; padding:20px; border-top:4px solid var(--turquesa);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--turquesa); margin-bottom:8px;">Fase 1 — Agora</div>
+          <h4 style="margin:0 0 8px; font-size:1rem;">Hotmart</h4>
+          <p style="font-size:0.82rem; color:var(--cinza-medio); margin:0; line-height:1.6;">Checkout integrado, plataforma pronta para lançar com agilidade. Menor custo inicial, maior velocidade de entrada no mercado.</p>
+        </div>
+        <div style="background:white; border-radius:10px; padding:20px; border-top:4px solid var(--laranja);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--laranja); margin-bottom:8px;">Fase 2 — Crescimento</div>
+          <h4 style="margin:0 0 8px; font-size:1rem;">WordPress + LearnDash</h4>
+          <p style="font-size:0.82rem; color:var(--cinza-medio); margin:0; line-height:1.6;">Maior controle sobre design, branding e dados. Permite personalização total e integração com comunidade.</p>
+        </div>
+        <div style="background:white; border-radius:10px; padding:20px; border-top:4px solid var(--azul);">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--azul); margin-bottom:8px;">Fase 3 — Escala</div>
+          <h4 style="margin:0 0 8px; font-size:1rem;">Plataforma Própria</h4>
+          <p style="font-size:0.82rem; color:var(--cinza-medio); margin:0; line-height:1.6;">Controle total da marca, dados e experiência. App mobile, marketplace de professores e funcionalidades exclusivas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#F8F9FA" preserveAspectRatio="none"><path d="M0,40L80,45.3C160,51,320,61,480,64C640,67,800,61,960,53.3C1120,45,1280,35,1360,29.3L1440,24L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     10 — ESTRATÉGIA DE MARKETING
+════════════════════════════════════════════ -->
+<section id="marketing" class="bg-off">
+  <div class="section-inner">
+    <div class="marketing-2col">
+      <div class="reveal-left">
+        <div class="tag tag-primary">Crescimento</div>
+        <h2 class="section-title">Estratégia de<br>Aquisição de Alunos</h2>
+        <div class="accent-bar"></div>
+        <p style="color:var(--cinza-medio); line-height:1.8; margin-bottom:28px;">
+          O modelo parte de conteúdo gratuito de alto valor para construir audiência 
+          e converte progressivamente até o produto de maior ticket — a <strong>Escola OBA Vitalícia</strong>.
+        </p>
+        <div class="funil-container reveal">
+          <div class="funil-step">
+            <h4>Conteúdo Gratuito (Audiência)</h4>
+            <p>Instagram, YouTube, TikTok — aulas e dicas grátis</p>
+          </div>
+          <div class="funil-step">
+            <h4>Aula Gratuita / Lead Magnet</h4>
+            <p>Captura de e-mail com aula gratuita de alto valor</p>
+          </div>
+          <div class="funil-step">
+            <h4>Mini Curso de Entrada</h4>
+            <p>Produto acessível R$47–97 para validar o aluno</p>
+          </div>
+          <div class="funil-step">
+            <h4>Curso Completo</h4>
+            <p>Formação completa numa técnica (R$297–697)</p>
+          </div>
+          <div class="funil-step">
+            <h4>🏆 Escola OBA Vitalícia</h4>
+            <p>Tudo + todos os futuros lançamentos (R$997–1.497)</p>
+          </div>
         </div>
       </div>
       <div class="reveal-right">
-        <img src="assets/arty-3.png" class="arty-float" style="width: 100%;" alt="Arty Tecnologia">
+        <h3 style="margin-bottom:18px; font-size:1.1rem;">Canais de Aquisição</h3>
+        <div class="canais-grid">
+          <div class="canal-card"><div class="canal-icon">📸</div><div><h4>Instagram</h4><p>Conteúdo artístico e bastidores do processo criativo</p></div></div>
+          <div class="canal-card"><div class="canal-icon">▶️</div><div><h4>YouTube</h4><p>Aulas gratuitas completas que geram autoridade</p></div></div>
+          <div class="canal-card"><div class="canal-icon">🎵</div><div><h4>TikTok</h4><p>Vídeos virais de transformação artística antes/depois</p></div></div>
+          <div class="canal-card"><div class="canal-icon">📣</div><div><h4>Meta Ads</h4><p>Campanhas de conversão e retargeting direto</p></div></div>
+          <div class="canal-card"><div class="canal-icon">🔍</div><div><h4>Google Ads</h4><p>Captura de intenção de busca por cursos de arte</p></div></div>
+          <div class="canal-card"><div class="canal-icon">📧</div><div><h4>E-mail Marketing</h4><p>Nutrição de leads e lançamentos para base própria</p></div></div>
+        </div>
+        <h3 style="margin:28px 0 16px; font-size:1.1rem;">Modelos de Lançamento</h3>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="info-card reveal delay-1" style="padding:18px;">
+            <strong style="color:var(--turquesa);">Lançamento Clássico</strong>
+            <p style="font-size:0.82rem; margin:6px 0 0; color:var(--cinza-medio);">Evento online gratuito "Semana do Desenho OBA" — 3 aulas gratuitas → abertura de vendas com urgência.</p>
+          </div>
+          <div class="info-card reveal delay-2" style="padding:18px;">
+            <strong style="color:var(--laranja);">Lançamento Híbrido</strong>
+            <p style="font-size:0.82rem; margin:6px 0 0; color:var(--cinza-medio);">Evento presencial/online + anúncios perpétuos rodando após o lançamento para maximizar captação.</p>
+          </div>
+          <div class="info-card reveal delay-3" style="padding:18px;">
+            <strong style="color:var(--azul);">Funil Perpétuo (Automático)</strong>
+            <p style="font-size:0.82rem; margin:6px 0 0; color:var(--cinza-medio);">Anúncio → Aula gratuita → Mini curso → Curso completo. Funciona 24/7 sem intervenção manual.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--branco)"><path d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
-    </div>
-  </section>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#00A896" preserveAspectRatio="none"><path d="M0,40L80,45.3C160,51,320,61,480,64C640,67,800,61,960,53.3C1120,45,1280,35,1360,29.3L1440,24L1440,100L0,100Z"/></svg>
+  </div>
+</section>
 
-  <!-- 09 MARKETING (BRANCO) -->
-  <section id="marketing" class="bg-branco">
-    <div style="width: 85%; margin: 0 auto;">
-      <h2 class="reveal" style="font-size: 3.5rem; text-align: center; color: var(--laranja);">Funil de Aquisição</h2>
-      <div style="max-width: 600px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 5px;">
-        <div class="reveal funnel-step" style="background: var(--turquesa); height: 80px; width: 100%; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">CONTEÚDO GRATUITO (AUDIÊNCIA)</div>
-        <div class="reveal delay-1 funnel-step" style="background: #00BCD4; height: 80px; width: 90%; border-radius: 10px; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">AULA GRÁTIS / CAPTURA</div>
-        <div class="reveal delay-2 funnel-step" style="background: var(--azul); height: 80px; width: 75%; border-radius: 10px; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">COMUNIDADE OBA (R$39)</div>
-        <div class="reveal delay-3 funnel-step" style="background: var(--laranja); height: 80px; width: 55%; border-radius: 10px; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">CURSO COMPLETO / VIP</div>
+<!-- ═══════════════════════════════════════════
+     11 — MODELO DE NEGÓCIO / MONETIZAÇÃO
+════════════════════════════════════════════ -->
+<section id="monetizacao" class="bg-turquesa">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-white">Modelo de Negócio</div>
+      <h2 class="section-title">Múltiplas fontes<br>de <span style="color:var(--amarelo)">receita</span></h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.85); margin:20px auto 0;">
+        3 produtos principais com escalabilidade progressiva — do módulo individual ao acesso vitalício.
+      </p>
+    </div>
+    <div class="produtos-grid">
+      <div class="produto-card reveal delay-1" style="background:white;">
+        <div class="produto-badge" style="background:var(--turquesa);">Entrada</div>
+        <div class="produto-icon">🎯</div>
+        <h3>Venda por Módulo</h3>
+        <div class="produto-preco">R$49 – R$97</div>
+        <p class="produto-desc">O aluno compra apenas o módulo que precisa.<br>Ex.: só o módulo "Sombreamento Realista".<br><br>Ideal para experimentar a metodologia OBA com baixo risco financeiro.</p>
       </div>
-      <div class="reveal" style="margin-top: 40px; text-align: center; background: #FFF5F7; padding: 25px; border-radius: 20px;">
-        <p>Utilizaremos as redes atuais da <strong>OBA</strong> para fortalecer a marca física e a futura <strong>Franquia OBA</strong>.</p>
+      <div class="produto-card destaque reveal delay-2" style="background:white;">
+        <div class="produto-badge" style="background:var(--amarelo); color:var(--azul);">Mais Popular</div>
+        <div class="produto-icon">📚</div>
+        <h3>Curso Completo</h3>
+        <div class="produto-preco">R$297 – R$697</div>
+        <p class="produto-desc">Todos os módulos de uma técnica completa.<br>Ex.: Curso Completo de Desenho Realista OBA.<br><br>Melhor relação custo-benefício para o aluno sério.</p>
+      </div>
+      <div class="produto-card reveal delay-3" style="background:white;">
+        <div class="produto-badge" style="background:var(--azul);">Premium</div>
+        <div class="produto-icon">🏆</div>
+        <h3>Escola Vitalícia OBA</h3>
+        <div class="produto-preco">R$997 – R$1.497</div>
+        <p class="produto-desc">Acesso a TODOS os cursos atuais<br>+ TODOS os futuros lançamentos.<br><br>Gera receita antecipada, comunidade forte e máxima fidelização.</p>
       </div>
     </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--laranja)"><path d="M0,96L80,85.3C160,75,320,53,480,53.3C640,53,800,75,960,85.3L1120,96L1440,96L1440,120L1120,120C960,120,800,120,640,120C480,120,160,120,80,120L0,120Z"></path></svg>
+    <div class="highlight-box white" style="margin-top:30px;">
+      <p style="color:white; margin:0; font-size:0.95rem;">
+        <strong style="color:var(--amarelo)">🔮 Expansão Futura — Assinatura Recorrente:</strong> Com 3.000 assinantes 
+        pagando R$39/mês → <strong>R$117.000/mês de receita previsível</strong>. Marketplace de professores 
+        e certificação artística são os próximos horizontes estratégicos.
+      </p>
     </div>
-  </section>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="var(--off-white)" preserveAspectRatio="none"><path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,100L0,100Z"/></svg>
+  </div>
+</section>
 
-  <!-- 10 MONETIZAÇÃO (LARANJA) -->
-  <section id="monetizacao" class="bg-laranja">
-    <div style="width: 85%; margin: 0 auto;">
-      <h2 class="reveal" style="font-size: 3.5rem; text-align: center;">Fontes de Receita</h2>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 50px;">
-        <div class="reveal" style="background: white; color: var(--cinza-texto); padding: 30px; border-radius: 25px; text-align: center;">
-          <h4 style="color: var(--turquesa);">ASSINATURA</h4>
-          <h2 style="font-size: 2.5rem;">R$ 39<small style="font-size: 1rem;">/mês</small></h2>
-          <p style="font-size: 0.8rem;">Comunidade OBA + DASHBOARD. Alunos da escola física têm acesso grátis.</p>
+<!-- ═══════════════════════════════════════════
+     12 — PROJEÇÕES FINANCEIRAS
+════════════════════════════════════════════ -->
+<section id="financeiro" class="bg-off">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-primary">Projeções</div>
+      <h2 class="section-title">Cenários de<br>faturamento</h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:var(--cinza-medio); margin:20px auto 0;">
+        3 cenários realistas baseados em ticket médio e volume de alunos. Todos conservadores e atingíveis.
+      </p>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-container reveal-left">
+        <div class="chart-bars">
+          <div class="bar-col">
+            <div class="bar-value">R$59.400</div>
+            <div class="bar b1 bar-anim" data-height="80px" style="height:0;"></div>
+          </div>
+          <div class="bar-col">
+            <div class="bar-value">R$397.000</div>
+            <div class="bar b2 bar-anim" data-height="180px" style="height:0;"></div>
+          </div>
+          <div class="bar-col">
+            <div class="bar-value">R$2.485.000</div>
+            <div class="bar b3 bar-anim" data-height="240px" style="height:0;"></div>
+          </div>
         </div>
-        <div class="reveal delay-1" style="background: var(--azul); padding: 30px; border-radius: 25px; text-align: center;">
-          <h4 style="color: var(--amarelo);">MODULAR</h4>
-          <h2 style="font-size: 2.5rem;">R$ 49 – R$ 97</h2>
-          <p style="font-size: 0.8rem; opacity: 0.7;">Venda de módulos específicos para entrada flexível.</p>
+        <div class="cenarios-info">
+          <div class="cenario-item">
+            <div class="cenario-alunos">200 alunos</div>
+            <div class="cenario-desc">Conservador</div>
+            <div class="cenario-ticket">Ticket: R$297</div>
+          </div>
+          <div class="cenario-item">
+            <div class="cenario-alunos">1.000 alunos</div>
+            <div class="cenario-desc">Crescimento</div>
+            <div class="cenario-ticket">Ticket: R$397</div>
+          </div>
+          <div class="cenario-item">
+            <div class="cenario-alunos">5.000 alunos</div>
+            <div class="cenario-desc">Escala</div>
+            <div class="cenario-ticket">Ticket: R$497</div>
+          </div>
         </div>
-        <div class="reveal delay-2" style="background: var(--amarelo); color: var(--cinza-texto); padding: 30px; border-radius: 25px; text-align: center;">
-          <h4 style="color: var(--azul);">CURSO COMPLETO</h4>
-          <h2 style="font-size: 2.5rem;">R$ 297 – R$ 697</h2>
-          <p style="font-size: 0.8rem;">Formações completas nas principais técnicas artísticas.</p>
+      </div>
+      <div class="reveal-right">
+        <div class="assinatura-box">
+          <div class="ab-header">
+            <h3>💰 Cenário Assinatura Futura</h3>
+          </div>
+          <div class="ab-body">
+            <div style="display:flex; align-items:baseline; gap:8px; margin-bottom:8px;">
+              <div class="assinatura-big">R$117k</div>
+              <span style="color:var(--cinza-medio); font-size:0.9rem;">/mês</span>
+            </div>
+            <p>Com <strong>3.000 assinantes</strong> a R$39/mês — receita recorrente previsível e escalável.</p>
+          </div>
         </div>
-        <div class="reveal delay-3" style="background: white; color: var(--cinza-texto); padding: 30px; border-radius: 25px; text-align: center; border: 4px solid var(--azul);">
-          <h4 style="color: var(--laranja);">PASSE VIP ANUAL</h4>
-          <h2 style="font-size: 2.5rem;">R$ 997 – R$ 1.497</h2>
-          <p style="font-size: 0.8rem;">Acesso a TODOS os conteúdos + Lançamentos futuros.</p>
+        <div style="margin-top:20px;">
+          <div class="info-card" style="margin-bottom:14px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <span style="font-weight:700; font-size:0.9rem;">CAC estimado</span>
+              <span style="color:var(--turquesa); font-weight:800;">R$50–R$120</span>
+            </div>
+            <p style="font-size:0.8rem; color:var(--cinza-medio); margin:0;">Custo de Aquisição por Cliente — via funil perpétuo e anúncios</p>
+          </div>
+          <div class="info-card" style="margin-bottom:14px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <span style="font-weight:700; font-size:0.9rem;">LTV médio</span>
+              <span style="color:var(--turquesa); font-weight:800;">R$497–R$697</span>
+            </div>
+            <p style="font-size:0.8rem; color:var(--cinza-medio); margin:0;">Valor de Vida do Cliente — considera upsell e upgrades de produto</p>
+          </div>
+          <div class="info-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <span style="font-weight:700; font-size:0.9rem;">ROI estimado</span>
+              <span style="color:var(--turquesa); font-weight:800;">4x – 12x</span>
+            </div>
+            <p style="font-size:0.8rem; color:var(--cinza-medio); margin:0;">Retorno sobre investimento em marketing — cenário conservador a otimista</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--branco)"><path d="M0,128L120,117.3C240,107,480,85,720,85.3C960,85,1200,107,1320,117.3L1440,128L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path></svg>
-    </div>
-  </section>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#1A237E" preserveAspectRatio="none"><path d="M0,48L80,42.7C160,37,320,27,480,26.7C640,27,800,37,960,45.3C1120,53,1280,61,1360,66.7L1440,72L1440,100L0,100Z"/></svg>
+  </div>
+</section>
 
-  <!-- 11 FINANCEIRO (BRANCO) -->
-  <section id="financeiro" class="bg-branco">
-    <div style="width: 85%; margin: 0 auto; text-align: center;">
-      <h2 class="reveal" style="font-size: 3.5rem; color: var(--azul);">Cenários de Faturamento</h2>
-      <div style="display: flex; align-items: flex-end; justify-content: center; gap: 40px; height: 300px; margin-top: 60px; border-bottom: 2px solid #EEE; padding-bottom: 10px;">
-        <div style="text-align: center;">
-          <div style="font-weight: bold; margin-bottom: 10px; color: var(--turquesa);">200 Alunos</div>
-          <div class="bar-anim" style="width: 80px; background: var(--turquesa); border-radius: 10px 10px 0 0;" data-height="60px"></div>
-          <div style="margin-top: 10px; font-size: 0.8rem;">Conservador (12 meses)</div>
-        </div>
-        <div style="text-align: center;">
-          <div style="font-weight: bold; margin-bottom: 10px; color: var(--amarelo-dark);">1.000 Alunos</div>
-          <div class="bar-anim" style="width: 80px; background: var(--amarelo); border-radius: 10px 10px 0 0;" data-height="160px"></div>
-          <div style="margin-top: 10px; font-size: 0.8rem;">Crescimento (3 anos)</div>
-        </div>
-        <div style="text-align: center;">
-          <div style="font-weight: bold; margin-bottom: 10px; color: var(--azul);">5.000 Alunos</div>
-          <div class="bar-anim" style="width: 80px; background: var(--azul); border-radius: 10px 10px 0 0;" data-height="250px"></div>
-          <div style="margin-top: 10px; font-size: 0.8rem;">Escala (5 anos)</div>
-        </div>
+<!-- ═══════════════════════════════════════════
+     13 — O TIME DO PROJETO
+════════════════════════════════════════════ -->
+<section id="equipe" class="bg-azul">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-primary">Time</div>
+      <h2 class="section-title">Quem constrói<br>esse projeto</h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+    </div>
+    <div class="equipe-grid">
+      <div class="equipe-card leo reveal delay-1">
+        <div class="equipe-avatar">L</div>
+        <h3>Leonardo</h3>
+        <div class="equipe-papel">Marca & Autoridade</div>
+        <ul class="equipe-lista">
+          <li>Dono da marca Oficina Belas Artes</li>
+          <li>Autoridade educacional e artística comprovada</li>
+          <li>Investimento financeiro inicial (tráfego pago)</li>
+          <li>Aprovação e curadoria de todo o conteúdo</li>
+          <li>Relacionamento com professores especialistas</li>
+          <li>Garantia da metodologia e qualidade pedagógica</li>
+          <li>Visão estratégica do projeto de longo prazo</li>
+        </ul>
+      </div>
+      <div class="equipe-card vander reveal delay-2">
+        <div class="equipe-avatar">V</div>
+        <h3>Vanderson</h3>
+        <div class="equipe-papel">Marketing & Tecnologia</div>
+        <ul class="equipe-lista">
+          <li>Estratégia digital completa do projeto</li>
+          <li>Estrutura e gestão dos funis de venda</li>
+          <li>Criação de landing pages e área de membros</li>
+          <li>Criativos e copywriting de campanhas</li>
+          <li>Gestão de anúncios (Meta Ads, Google Ads)</li>
+          <li>Estrutura técnica da plataforma</li>
+          <li>Produção e edição técnica dos vídeos</li>
+          <li>Entra com capital intelectual (não financeiro)</li>
+        </ul>
+      </div>
+      <div class="equipe-card prof reveal delay-3">
+        <div class="equipe-avatar">🎨</div>
+        <h3>Professores Especialistas</h3>
+        <div class="equipe-papel">Conteúdo & Didática</div>
+        <ul class="equipe-lista">
+          <li>Criação das aulas e conteúdo pedagógico</li>
+          <li>Especialistas nas técnicas ensinadas</li>
+          <li>Didática artística e exercícios práticos</li>
+          <li>Material de apoio do curso</li>
+          <li>Recebem 20% de royalties por curso</li>
+          <li>Conteúdo pertence à plataforma OBA</li>
+          <li>Não entram com investimento financeiro</li>
+        </ul>
       </div>
     </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--azul)"><path d="M0,0L120,5.3C240,11,480,21,720,32C960,43,1200,53,1320,58.7L1440,64L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path></svg>
+    <div class="highlight-box white" style="margin-top:30px;">
+      <p style="color:rgba(255,255,255,0.9); margin:0; font-size:0.9rem;">
+        <strong>🛡️ Segurança Operacional:</strong> Contratos garantem que o conteúdo produzido pertence à OBA Online. 
+        Os professores recebem royalties mediante exclusividade. A plataforma não depende de nenhum professor específico — 
+        novos especialistas podem ser adicionados a qualquer momento sem prejudicar a operação.
+      </p>
     </div>
-  </section>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="var(--branco)" preserveAspectRatio="none"><path d="M0,64L120,58.7C240,53,480,43,720,42.7C960,43,1200,53,1320,58.7L1440,64L1440,100L0,100Z"/></svg>
+  </div>
+</section>
 
-  <!-- 12 EQUIPE (AZUL) -->
-  <section id="operacional" class="bg-azul">
-    <div style="width: 85%; margin: 0 auto;">
-      <h2 class="reveal" style="font-size: 3.5rem; text-align: center; color: var(--amarelo);">O Time do Projeto</h2>
-      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 50px;">
-        <div class="reveal" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
-          <h3 style="color: var(--amarelo);">Leonardo</h3>
-          <p style="font-size: 0.83rem; line-height: 1.6; margin-top: 10px;">Proprietário da marca OBA, autoridade educacional, autoridade artística e visão estratégica de negócio.</p>
-        </div>
-        <div class="reveal delay-1" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
-          <h3 style="color: var(--turquesa);">Vanderson</h3>
-          <p style="font-size: 0.83rem; line-height: 1.6; margin-top: 10px;">Marketing & Tecnologia, estratégia digital, funis de venda, landing pages e estrutura técnica da plataforma.</p>
-        </div>
-        <div class="reveal delay-2" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
-          <h3 style="color: var(--amarelo);">Especialistas</h3>
-          <p style="font-size: 0.83rem; line-height: 1.6; margin-top: 10px;">Corpo técnico de professores convidados, cada um mestre em sua técnica (Realismo, Mangá, etc).</p>
-        </div>
-      </div>
-    </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--branco)"><path d="M0,96L120,85.3C240,75,480,53,720,53.3C960,53,1200,75,1320,85.3L1440,96L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path></svg>
-    </div>
-  </section>
-
-  <!-- 13 DIVISÃO (BRANCO) -->
-  <section id="divisao" class="bg-branco">
-    <div style="width: 85%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px;">
+<!-- ═══════════════════════════════════════════
+     14 — ESTRUTURA SOCIETÁRIA & FINANCEIRA
+════════════════════════════════════════════ -->
+<section id="societaria" class="bg-branco">
+  <div class="section-inner">
+    <div class="societaria-grid">
       <div class="reveal-left">
-        <h2 style="font-size: 3.5rem; color: var(--turquesa);">Divisão de Lucros</h2>
-        <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px;">
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="width: 25px; height: 25px; background: var(--turquesa); border-radius: 5px;"></div>
-            <span>35% Leonardo</span>
+        <div class="tag tag-primary">Estrutura Societária</div>
+        <h2 class="section-title">Divisão de<br>Responsabilidades<br>& <span style="color:var(--turquesa)">Receitas</span></h2>
+        <div class="accent-bar"></div>
+        <p style="color:var(--cinza-medio); line-height:1.8; margin-bottom:30px;">
+          A divisão foi desenhada para ser <strong>justa e equilibrada</strong>, considerando 
+          investimento financeiro, capital intelectual, tempo dedicado e valor estratégico de cada participante.
+        </p>
+        <div class="divisao-list">
+          <div class="divisao-item reveal delay-1">
+            <div class="divisao-color" style="background:var(--turquesa);"></div>
+            <div style="flex:1;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <span class="divisao-nome">Leonardo</span>
+                <span class="divisao-pct" style="color:var(--turquesa);">35%</span>
+              </div>
+              <div class="divisao-bar-wrap"><div class="divisao-bar" style="background:var(--turquesa); width:0;" data-width="35%"></div></div>
+              <div class="divisao-detail">Marca + autoridade + investimento financeiro</div>
+            </div>
           </div>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="width: 25px; height: 25px; background: var(--azul); border-radius: 5px;"></div>
-            <span>35% Vanderson</span>
+          <div class="divisao-item reveal delay-2">
+            <div class="divisao-color" style="background:var(--azul);"></div>
+            <div style="flex:1;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <span class="divisao-nome">Vanderson</span>
+                <span class="divisao-pct" style="color:var(--azul);">35%</span>
+              </div>
+              <div class="divisao-bar-wrap"><div class="divisao-bar" style="background:var(--azul); width:0;" data-width="35%"></div></div>
+              <div class="divisao-detail">Marketing + tecnologia + estrutura digital completa</div>
+            </div>
           </div>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="width: 25px; height: 25px; background: var(--laranja); border-radius: 5px;"></div>
-            <span>20% Especialista (Royalties)</span>
+          <div class="divisao-item reveal delay-3">
+            <div class="divisao-color" style="background:var(--laranja);"></div>
+            <div style="flex:1;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <span class="divisao-nome">Professores</span>
+                <span class="divisao-pct" style="color:var(--laranja);">20%</span>
+              </div>
+              <div class="divisao-bar-wrap"><div class="divisao-bar" style="background:var(--laranja); width:0;" data-width="20%"></div></div>
+              <div class="divisao-detail">Royalties por curso produzido — 20% do faturamento do curso</div>
+            </div>
           </div>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <div style="width: 25px; height: 25px; background: #DDD; border-radius: 5px;"></div>
-            <span>10% Caixa do Projeto</span>
+          <div class="divisao-item reveal delay-4">
+            <div class="divisao-color" style="background:#CBD5E0;"></div>
+            <div style="flex:1;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <span class="divisao-nome">Caixa do Projeto</span>
+                <span class="divisao-pct" style="color:var(--cinza-medio);">10%</span>
+              </div>
+              <div class="divisao-bar-wrap"><div class="divisao-bar" style="background:#CBD5E0; width:0;" data-width="10%"></div></div>
+              <div class="divisao-detail">Reserva para novos cursos, marketing e infraestrutura</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="reveal-right" style="text-align: center;">
-         <!-- Donut Chart Simplificado animado via JS -->
-         <svg width="250" height="250" viewBox="0 0 36 36" style="transform: rotate(-90deg);">
-            <circle cx="18" cy="18" r="16" fill="transparent" stroke="#DDD" stroke-width="3"></circle>
-            <circle cx="18" cy="18" r="16" fill="transparent" stroke="var(--turquesa)" stroke-width="3" stroke-dasharray="35 100"></circle>
-            <circle cx="18" cy="18" r="16" fill="transparent" stroke="var(--azul)" stroke-width="3" stroke-dasharray="35 100" stroke-dashoffset="-35"></circle>
-            <circle cx="18" cy="18" r="16" fill="transparent" stroke="var(--laranja)" stroke-width="3" stroke-dasharray="20 100" stroke-dashoffset="-70"></circle>
-         </svg>
+      <div class="reveal-right">
+        <div style="background:white; border-radius:var(--radius-md); padding:32px; margin-bottom:20px; box-shadow:var(--shadow-sm);">
+          <h3 style="color:var(--azul); margin:0 0 20px; font-size:1.05rem;">📋 Exemplo Prático de Distribuição</h3>
+          <div style="background:var(--off-white); border-radius:10px; padding:18px; margin-bottom:16px; text-align:center;">
+            <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; font-weight:700; color:var(--cinza-medio); margin-bottom:8px;">Faturamento Total do Período</div>
+            <div style="font-size:2.5rem; font-weight:900; color:var(--azul); font-family:'Nunito',sans-serif;">R$100.000</div>
+          </div>
+          <div style="display:grid; gap:10px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:rgba(0,168,150,0.08); border-radius:8px; border-left:3px solid var(--turquesa);">
+              <span style="font-weight:700;">Leonardo</span>
+              <span style="font-weight:900; color:var(--turquesa); font-size:1.1rem;">R$35.000</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:rgba(26,35,126,0.06); border-radius:8px; border-left:3px solid var(--azul);">
+              <span style="font-weight:700;">Vanderson</span>
+              <span style="font-weight:900; color:var(--azul); font-size:1.1rem;">R$35.000</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:rgba(255,109,0,0.08); border-radius:8px; border-left:3px solid var(--laranja);">
+              <span style="font-weight:700;">Professor</span>
+              <span style="font-weight:900; color:var(--laranja); font-size:1.1rem;">R$20.000</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; background:rgba(0,0,0,0.04); border-radius:8px; border-left:3px solid #CBD5E0;">
+              <span style="font-weight:700;">Caixa</span>
+              <span style="font-weight:900; color:var(--cinza-medio); font-size:1.1rem;">R$10.000</span>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box orange">
+          <p style="margin:0; font-size:0.88rem;">
+            <strong>⚖️ Regras Importantes:</strong> O professor não pode vender o mesmo curso fora da plataforma. 
+            O caixa é destinado para novos cursos e marketing. Com crescimento expressivo, 
+            os termos podem ser renegociados entre os sócios.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--amarelo)"><path d="M0,0L120,5.3C240,11,480,21,720,32C960,43,1200,53,1320,58.7L1440,64L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path></svg>
-    </div>
-  </section>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#0D1B2A" preserveAspectRatio="none"><path d="M0,0L120,5.3C240,11,480,21,720,32C960,43,1200,53,1320,58.7L1440,64L1440,100L0,100Z"/></svg>
+  </div>
+</section>
 
-  <!-- 14 ROADMAP (AMARELO) -->
-  <section id="roadmap" class="bg-amarelo">
-    <div style="width: 85%; margin: 0 auto;">
-      <h2 class="reveal" style="font-size: 3.5rem; text-align: center;">Cronograma de Escala</h2>
-      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-top: 60px;">
-        <div class="reveal" style="text-align: center;">
-          <div style="font-size: 2rem;">🔍</div>
-          <strong>Fase 1</strong>
-          <p style="font-size: 0.7rem;">Entendimento Total</p>
-        </div>
-        <div class="reveal delay-1" style="text-align: center;">
-          <div style="font-size: 2rem;">✒️</div>
-          <strong>Fase 2</strong>
-          <p style="font-size: 0.7rem;">Contrato e Ajustes</p>
-        </div>
-        <div class="reveal delay-2" style="text-align: center;">
-          <div style="font-size: 2rem;">🎬</div>
-          <strong>Fase 3</strong>
-          <p style="font-size: 0.7rem;">Início / Gravações</p>
-        </div>
-        <div class="reveal delay-3" style="text-align: center;">
-          <div style="font-size: 2rem;">🚀</div>
-          <strong>Fase 4</strong>
-          <p style="font-size: 0.7rem;">Primeiro Lançamento</p>
-        </div>
-        <div class="reveal delay-4" style="text-align: center;">
-          <div style="font-size: 2rem;">♾️</div>
-          <strong>Fase 5</strong>
-          <p style="font-size: 0.7rem;">Escala Perpétua</p>
-        </div>
-      </div>
+<!-- ═══════════════════════════════════════════
+     15 — EXPANSÃO & ROADMAP
+════════════════════════════════════════════ -->
+<section id="expansao" class="bg-dark">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:50px;">
+      <div class="tag tag-white">Visão de Futuro</div>
+      <h2 class="section-title" style="color:white;">Expansão &amp;<br><span style="color:var(--amarelo)">Roadmap Estratégico</span></h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.7); margin:20px auto 0;">
+        A OBA Online não é apenas um curso — é o início de um ecossistema de ensino artístico escalável, 
+        com potencial de se tornar o maior do Brasil.
+      </p>
     </div>
-    <div class="wave wave-bottom">
-      <svg viewBox="0 0 1440 120" fill="var(--branco)"><path d="M0,96L120,85.3C240,75,480,53,720,53.3C960,53,1200,75,1320,85.3L1440,96L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"></path></svg>
-    </div>
-  </section>
 
-  <!-- 15 FINAL (BRANCO) -->
-  <section id="final" class="bg-branco">
-    <div style="width: 85%; margin: 0 auto; text-align: center;">
-      <h2 class="reveal" style="font-size: 4rem; color: var(--azul);">A arte não tem limites.</h2>
-      <p class="reveal" style="font-size: 1.4rem; margin-top: 20px;">OBA Online: A transformação de um método histórico em um ecossistema escalável.</p>
-      
-      <div class="reveal vander-highlight" style="background: rgba(26, 35, 126, 0.05); border: 2px solid var(--azul);">
-        <h3 style="color: var(--azul); font-size: 1.5rem;">Criação e Organização do Projeto</h3>
-        <p style="margin-top: 15px; font-weight: 500; color: var(--cinza-texto);">Desenvolvido por <strong>Vanderson Oliveira — Da OláMundoDigital</strong></p>
-        <p style="font-size: 0.9rem; margin-top: 10px; color: var(--cinza-texto);">Este projeto foi construído através de um estudo detalhado das ideias de <strong>Leonardo</strong> combinadas com extensa pesquisa de mercado para garantir máxima viabilidade e impacto.</p>
+    <div class="roadmap-timeline">
+      <div class="roadmap-phase reveal delay-1">
+        <div class="roadmap-dot">1</div>
+        <h4 style="color:white;">Entendimento Total</h4>
+        <p style="color:rgba(255,255,255,0.6);">Alinhamento completo dos sócios, contratos e estrutura inicial</p>
       </div>
-
-      <div style="margin-top: 60px;">
-        <img src="assets/arty-joinha.png" class="arty-float" style="width: 250px;" alt="Arty Joinha">
+      <div class="roadmap-phase reveal delay-2">
+        <div class="roadmap-dot">2</div>
+        <h4 style="color:white;">Produção de Conteúdo</h4>
+        <p style="color:rgba(255,255,255,0.6);">Gravações dos primeiros 3 cursos com os professores</p>
+      </div>
+      <div class="roadmap-phase reveal delay-3">
+        <div class="roadmap-dot">3</div>
+        <h4 style="color:white;">Primeiro Lançamento</h4>
+        <p style="color:rgba(255,255,255,0.6);">Evento online + anúncios — meta de 200 alunos</p>
+      </div>
+      <div class="roadmap-phase reveal delay-4">
+        <div class="roadmap-dot">4</div>
+        <h4 style="color:white;">Funil Perpétuo</h4>
+        <p style="color:rgba(255,255,255,0.6);">Automação da aquisição — crescimento orgânico e pago</p>
+      </div>
+      <div class="roadmap-phase reveal delay-5">
+        <div class="roadmap-dot">5</div>
+        <h4 style="color:white;">Escala Perpétua</h4>
+        <p style="color:rgba(255,255,255,0.6);">Expansão de cursos, marketplace e plataforma própria</p>
       </div>
     </div>
-  </section>
+
+    <div class="expansao-grid" style="margin-top:60px;">
+      <div class="expansao-card reveal delay-1">
+        <div class="phase">Curto Prazo (1 ano)</div>
+        <div class="icon">🚀</div>
+        <h3>Lançamento e Validação</h3>
+        <p>Plataforma no ar com 3 cursos principais. Meta de 1.000 alunos. Funil perpétuo funcionando e gerando receita recorrente.</p>
+      </div>
+      <div class="expansao-card reveal delay-2">
+        <div class="phase">Médio Prazo (3 anos)</div>
+        <div class="icon">📈</div>
+        <h3>Crescimento da Biblioteca</h3>
+        <p>10.000 alunos, 20+ cursos, professores especialistas convidados consolidados. Assinatura mensal ativa com receita previsível.</p>
+      </div>
+      <div class="expansao-card reveal delay-3">
+        <div class="phase">Longo Prazo (5 anos)</div>
+        <div class="icon">🌍</div>
+        <h3>Ecossistema Escalável</h3>
+        <p>Maior escola de desenho online do Brasil. Marketplace de professores, certificação artística reconhecida, comunidade internacional.</p>
+      </div>
+      <div class="expansao-card reveal delay-4">
+        <div class="icon" style="color:var(--amarelo); font-size:2rem;">🎬</div>
+        <h3 style="color:rgba(255,255,255,0.9);">Netflix do Desenho</h3>
+        <p>Biblioteca de conteúdo crescente com assinatura mensal, acesso ilimitado a novos conteúdos e atualizações constantes.</p>
+      </div>
+      <div class="expansao-card reveal delay-5">
+        <div class="icon" style="color:var(--amarelo); font-size:2rem;">🏫</div>
+        <h3 style="color:rgba(255,255,255,0.9);">Marketplace de Professores</h3>
+        <p>Artistas do Brasil inteiro podem publicar cursos na plataforma OBA, aprovados pela curadoria, com royalties automáticos.</p>
+      </div>
+      <div class="expansao-card reveal">
+        <div class="icon" style="color:var(--amarelo); font-size:2rem;">🌐</div>
+        <h3 style="color:rgba(255,255,255,0.9);">Escola Digital Global</h3>
+        <p>Expansão para o mercado latino-americano e português. A OBA como referência internacional em ensino artístico inclusivo.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="var(--off-white)" preserveAspectRatio="none"><path d="M0,96L120,85.3C240,75,480,53,720,53.3C960,53,1200,75,1320,85.3L1440,96L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     16 — RISCOS & MITIGAÇÃO
+════════════════════════════════════════════ -->
+<section id="riscos" class="bg-off">
+  <div class="section-inner">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="tag tag-orange">Gestão de Riscos</div>
+      <h2 class="section-title">Riscos identificados<br>&amp; <span style="color:var(--turquesa)">como mitigamos</span></h2>
+      <div class="accent-bar" style="margin:16px auto 0;"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;">
+      <div class="info-card reveal delay-1">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+          <div style="width:40px; height:40px; background:rgba(255,109,0,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">⚠️</div>
+          <div>
+            <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:var(--laranja); margin-bottom:2px;">Risco Alto</div>
+            <h4 style="margin:0; font-size:0.98rem;">Baixa produção de conteúdo</h4>
+          </div>
+        </div>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0 0 12px; line-height:1.7;">Se a gravação de cursos for lenta, o lançamento atrasa e a motivação cai.</p>
+        <div style="background:rgba(0,168,150,0.08); border-radius:8px; padding:12px; font-size:0.83rem; color:var(--cinza-texto);">
+          <strong style="color:var(--turquesa);">✅ Mitigação:</strong> Planejamento de gravação com cronograma fixo. Primeiros 3 cursos são o MVP. Professores com contrato de entrega.
+        </div>
+      </div>
+      <div class="info-card reveal delay-2">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+          <div style="width:40px; height:40px; background:rgba(255,109,0,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">⚠️</div>
+          <div>
+            <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:var(--laranja); margin-bottom:2px;">Risco Médio</div>
+            <h4 style="margin:0; font-size:0.98rem;">Dependência de um professor</h4>
+          </div>
+        </div>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0 0 12px; line-height:1.7;">Se o projeto depender de um único professor, a saída dele compromete toda a operação.</p>
+        <div style="background:rgba(0,168,150,0.08); border-radius:8px; padding:12px; font-size:0.83rem; color:var(--cinza-texto);">
+          <strong style="color:var(--turquesa);">✅ Mitigação:</strong> A <strong>marca OBA</strong> é o ativo, não o professor. Múltiplos especialistas por técnica desde o início. Contratos de exclusividade.
+        </div>
+      </div>
+      <div class="info-card reveal delay-3">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+          <div style="width:40px; height:40px; background:rgba(255,193,7,0.15); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">⚡</div>
+          <div>
+            <div style="font-size:0.72rem; font-weight:800; text-transform:uppercase; color:var(--amarelo-dark); margin-bottom:2px;">Risco Médio</div>
+            <h4 style="margin:0; font-size:0.98rem;">Marketing insuficiente</h4>
+          </div>
+        </div>
+        <p style="font-size:0.85rem; color:var(--cinza-medio); margin:0 0 12px; line-height:1.7;">Sem investimento em tráfego, o lançamento pode não atingir o número mínimo de alunos.</p>
+        <div style="background:rgba(0,168,150,0.08); border-radius:8px; padding:12px; font-size:0.83rem; color:var(--cinza-texto);">
+          <strong style="color:var(--turquesa);">✅ Mitigação:</strong> Funil perpétuo automatizado, uso das redes atuais da OBA e aportamento de verba para tráfego pago desde o início.
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:30px; background:white; border-radius:var(--radius-md); padding:28px; border:1px solid rgba(0,168,150,0.15);">
+      <h3 style="color:var(--turquesa); margin:0 0 16px; font-size:1.1rem;">🎯 KPIs de Sucesso — Indicadores que vamos monitorar</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px;">
+        <div style="text-align:center; padding:16px; background:var(--off-white); border-radius:10px;">
+          <div style="font-size:1.6rem; margin-bottom:6px;">👥</div>
+          <div style="font-weight:800; font-size:0.9rem;">Nº de Alunos</div>
+          <div style="font-size:0.78rem; color:var(--cinza-medio); margin-top:3px;">Total matriculados ativos</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--off-white); border-radius:10px;">
+          <div style="font-size:1.6rem; margin-bottom:6px;">✅</div>
+          <div style="font-weight:800; font-size:0.9rem;">Taxa de Conclusão</div>
+          <div style="font-size:0.78rem; color:var(--cinza-medio); margin-top:3px;">% alunos que terminam o curso</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--off-white); border-radius:10px;">
+          <div style="font-size:1.6rem; margin-bottom:6px;">💰</div>
+          <div style="font-weight:800; font-size:0.9rem;">CAC</div>
+          <div style="font-size:0.78rem; color:var(--cinza-medio); margin-top:3px;">Custo de aquisição por aluno</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--off-white); border-radius:10px;">
+          <div style="font-size:1.6rem; margin-bottom:6px;">📊</div>
+          <div style="font-weight:800; font-size:0.9rem;">LTV</div>
+          <div style="font-size:0.78rem; color:var(--cinza-medio); margin-top:3px;">Valor de vida do cliente</div>
+        </div>
+        <div style="text-align:center; padding:16px; background:var(--off-white); border-radius:10px;">
+          <div style="font-size:1.6rem; margin-bottom:6px;">🎯</div>
+          <div style="font-weight:800; font-size:0.9rem;">Ticket Médio</div>
+          <div style="font-size:0.78rem; color:var(--cinza-medio); margin-top:3px;">Valor médio por venda</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave wave-bottom">
+    <svg viewBox="0 0 1440 100" fill="#1A237E" preserveAspectRatio="none"><path d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,100L0,100Z"/></svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     17 — ENCERRAMENTO / CONCLUSÃO
+════════════════════════════════════════════ -->
+<section id="encerramento" class="bg-azul" style="align-items:center; text-align:center;">
+  <div class="encerramento-inner">
+    <img src="assets/arty-joinha.png" class="arty-float reveal" style="width:220px; margin:0 auto 30px; display:block; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));" alt="Arty joinha">
+    <div class="tag tag-white" style="margin-bottom:20px;">Conclusão Estratégica</div>
+    <h2 class="final-title">A arte não tem limites.<br>O negócio, <span style="color:var(--turquesa-light)">tampouco.</span></h2>
+    <p class="final-sub" style="color:rgba(255,255,255,0.85);">
+      OBA Online: A transformação de um método histórico em um ecossistema digital escalável, 
+      acessível e sustentável — que pode impactar centenas de milhares de pessoas.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:50px;">
+      <div class="stat-card reveal delay-1">
+        <div class="stat-num" style="color:var(--amarelo);">Sólido</div>
+        <div class="stat-label">Metodologia comprovada em escola física</div>
+      </div>
+      <div class="stat-card reveal delay-2">
+        <div class="stat-num" style="color:var(--turquesa-light);">Escalável</div>
+        <div class="stat-label">De 200 a 5.000+ alunos com os mesmos recursos</div>
+      </div>
+      <div class="stat-card reveal delay-3">
+        <div class="stat-num" style="color:var(--amarelo);">Rentável</div>
+        <div class="stat-label">Múltiplas fontes de receita desde o lançamento</div>
+      </div>
+    </div>
+
+    <div class="creditos-box reveal">
+      <h3 style="color:var(--amarelo);">Criação e Organização do Projeto</h3>
+      <p style="color:rgba(255,255,255,0.85); font-size:1rem;">
+        Desenvolvido por <strong>Vanderson Oliveira — OláMundoDigital</strong>
+      </p>
+      <p style="color:rgba(255,255,255,0.7); font-size:0.9rem;">
+        Este projeto foi construído através de um estudo detalhado das ideias de <strong>Leonardo</strong>, 
+        combinadas com extensa pesquisa de mercado, análise competitiva e planejamento estratégico, 
+        para garantir <strong>máxima viabilidade e impacto</strong>.
+      </p>
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.15);">
+        <span style="font-size:0.85rem; color:rgba(255,255,255,0.5); font-weight:600; letter-spacing:1px; text-transform:uppercase;">V.1.01.00 — STRATEGIC EDITION — Confidencial</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<!-- Mobile NavBar -->
+<!-- MOBILE NAV -->
 <nav class="mobile-bottom-bar">
   <a href="#intro" class="bottom-nav-item mobile-nav-link active">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
     <span>Início</span>
   </a>
   <a href="#cursos" class="bottom-nav-item mobile-nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
     <span>Cursos</span>
   </a>
   <div class="bottom-nav-item bottom-nav-center" onclick="toggleMobileMenu()">
-    <div class="center-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="5" r="3"/><circle cx="12" cy="19" r="3"/></svg></div>
+    <div class="center-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
     <span>Menu</span>
   </div>
-  <a href="#solucao" class="bottom-nav-item mobile-nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-    <span>App</span>
-  </a>
   <a href="#monetizacao" class="bottom-nav-item mobile-nav-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-    <span>Lucro</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    <span>Negócio</span>
+  </a>
+  <a href="#encerramento" class="bottom-nav-item mobile-nav-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <span>Final</span>
   </a>
 </nav>
+<div class="mobile-menu-overlay"></div>
 
-<div class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
-
-<script src="app.js?v=1.00.07"></script>
+<script src="app.js?v=1.01.00"></script>
 </body>
 </html>
