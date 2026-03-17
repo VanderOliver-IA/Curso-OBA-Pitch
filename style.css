@@ -585,7 +585,7 @@ section {
    SEÇÃO 14 — EXPANSÃO / VISÃO FUTURA
 ════════════════════════════════════════════ */
 .expansao-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 40px; }
-.expansao-card { border-radius: var(--radius-md); padding: 28px 22px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); transition: transform 0.3s, background 0.3s; }
+.expansao-card { border-radius: var(--radius-md); padding: 28px 22px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); transition: transform 0.3s, background 0.3s; width: 100%; box-sizing: border-box; }
 .expansao-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.12); }
 .expansao-card .phase { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; margin-bottom: 8px; }
 .expansao-card .icon { font-size: 2.5rem; margin-bottom: 14px; }
@@ -627,19 +627,12 @@ section {
 
   .hero-grid, .historia-grid, .mercado-grid, .solucao-grid,
   .societaria-grid, .marketing-2col, .chart-wrap { grid-template-columns: 1fr; gap: 30px; }
-  .problema-grid, .niveis-grid, .equipe-grid, .expansao-grid,
-  .materiais-grid, .tipos-grid, .produtos-grid { grid-template-columns: 1fr; gap: 18px; }
-  .mercado-numbers, .canais-grid { grid-template-columns: 1fr 1fr; }
-  .hero-stats-row { flex-wrap: wrap; gap: 20px; }
-  .jornada-flow { gap: 12px; }
-  .jornada-arrow { display: none; }
-  .aula-cards { grid-template-columns: 1fr; }
-  .roadmap-timeline { flex-direction: column; gap: 30px; }
-  .roadmap-timeline::before { display: none; }
-  .progress-container { display: none; }
-  .mobile-bottom-bar { display: flex !important; }
+  .expansao-grid { grid-template-columns: 1fr; gap: 20px; width: 100%; }
+  .roadmap-phase { padding: 40px 10px 0; }
   .reveal-left, .reveal-right { transform: translateY(30px); opacity: 0; }
   .reveal-left.visible, .reveal-right.visible { transform: translateY(0); opacity: 1; }
+  #encerramento { padding: 60px 0 120px; }
+  .creditos-box { padding: 24px 20px; margin-top: 30px; }
 }
 
 /* Mobile bottom bar */
