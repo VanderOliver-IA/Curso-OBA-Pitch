@@ -1,0 +1,394 @@
+
+# 1️⃣ Estrutura Completa da Plataforma OBA Online
+
+A OBA Online deve ser construída como **uma escola digital estruturada**, não apenas como um curso.
+
+Plataformas educacionais de sucesso funcionam com **biblioteca de cursos + comunidade + trilhas de aprendizado**. ([Plataforma eadSimples][1])
+
+## Estrutura da Escola
+
+A plataforma pode ser dividida em **4 pilares principais**.
+
+### 1. Biblioteca de Cursos
+
+Cursos completos organizados por categorias:
+
+**Fundamentos**
+
+* Fundamentos do desenho
+* Perspectiva
+* Luz e sombra
+
+**Estilos**
+
+* Mangá
+* Cartoon
+* Realismo
+* Concept art
+
+**Especializações**
+
+* Anatomia
+* Criação de personagens
+* Storytelling visual
+* Ilustração profissional
+
+---
+
+### 2. Trilhas de Aprendizado
+
+Trilhas funcionam como **caminhos pedagógicos guiados**.
+
+Exemplo:
+
+Trilha Mangá
+
+1 Fundamentos do desenho
+2 Anatomia estilo anime
+3 Expressões
+4 Poses dinâmicas
+5 Criação de personagens
+6 Narrativa visual
+
+---
+
+### 3. Comunidade OBA
+
+Área interna onde alunos podem:
+
+* postar desenhos
+* receber feedback
+* participar de desafios
+
+Isso aumenta retenção e engajamento.
+
+---
+
+### 4. Certificação
+
+Certificados digitais OBA:
+
+Exemplo
+
+* Certificado Desenho Realista
+* Certificado Ilustração Mangá
+
+---
+
+# 2️⃣ Modelo de Negócio Escalável
+
+Projetos educacionais online normalmente utilizam **combinação de modelos de monetização**, não apenas um. ([Plataforma eadSimples][1])
+
+A OBA pode usar **4 modelos simultaneamente**.
+
+---
+
+## Modelo 1 — Venda por módulo
+
+Produto de entrada.
+
+Exemplo:
+
+Módulo
+Sombreamento realista
+
+Preço sugerido
+
+R$47 – R$97
+
+---
+
+## Modelo 2 — Curso completo
+
+Produto principal.
+
+Exemplo:
+
+Curso Realismo OBA
+
+Preço
+
+R$297 – R$697
+
+---
+
+## Modelo 3 — Escola OBA
+
+Acesso completo à biblioteca.
+
+Modelo semelhante a uma **Netflix da educação**. ([Plataforma eadSimples][1])
+
+Preço sugerido
+
+R$39 a R$59 mensal
+
+---
+
+## Modelo 4 — Acesso vitalício
+
+Produto premium.
+
+Exemplo
+
+OBA Online Lifetime
+
+Preço
+
+R$997 – R$1.497
+
+---
+
+# 3️⃣ Estrutura de Monetização
+
+A monetização ideal precisa ter **escada de valor**.
+
+## Escada de produtos
+
+Conteúdo gratuito
+↓
+Mini curso (R$27 – R$47)
+↓
+Curso completo (R$297 – R$697)
+↓
+Especialização (R$997)
+↓
+Escola OBA vitalícia
+
+---
+
+## Produtos complementares
+
+Possibilidades extras:
+
+* Apostilas digitais
+* Desafios pagos
+* Mentorias
+* Eventos online
+* Workshops
+
+---
+
+# 4️⃣ Estrutura de Cursos
+
+Cada curso deve seguir **um padrão pedagógico replicável**.
+
+---
+
+## Estrutura do curso
+
+Curso: Desenho Realista
+
+Módulo 1
+Fundamentos
+
+Módulo 2
+Luz e sombra
+
+Módulo 3
+Texturas
+
+Módulo 4
+Retrato
+
+Módulo 5
+Figura humana
+
+---
+
+## Estrutura de aula
+
+Formato ideal:
+
+* 5 a 12 minutos
+* foco em prática
+* exercícios após aula
+
+---
+
+## Material complementar
+
+Cada aula pode ter:
+
+* PDF
+* exercício
+* referência visual
+
+---
+
+# 5️⃣ Arquitetura Técnica da Plataforma
+
+Existem **3 opções possíveis**.
+
+---
+
+## Opção 1 — Plataforma pronta
+
+Exemplos
+
+Hotmart
+Eduzz
+Kiwify
+
+Vantagens
+
+* rápida implementação
+* checkout integrado
+* afiliados
+
+---
+
+## Opção 2 — Plataforma própria
+
+Tecnologia
+
+WordPress + LMS
+
+Plugins:
+
+LearnDash
+Tutor LMS
+
+---
+
+## Opção 3 — Plataforma SaaS própria
+
+Construção personalizada.
+
+Mais caro, porém escalável.
+
+---
+
+# 6️⃣ Modelo Financeiro do Projeto
+
+Divisão inicial proposta:
+
+Leonardo
+35%
+
+Vanderson
+35%
+
+Professor
+20%
+
+Caixa
+10%
+
+---
+
+## Justificativa estratégica
+
+Leonardo
+
+* marca
+* reputação
+* investimento
+
+---
+
+Vanderson
+
+* marketing
+* tecnologia
+* estrutura digital
+
+---
+
+Professor
+
+* conteúdo
+* expertise técnica
+
+---
+
+## Caixa do projeto
+
+Usado para:
+
+* novos cursos
+* marketing
+* equipe
+
+---
+
+# 7️⃣ Estratégia de Crescimento
+
+Projetos de cursos online que crescem muito seguem 3 pilares:
+
+conteúdo gratuito
+comunidade
+produto premium
+
+---
+
+## Fase 1 — Autoridade
+
+Criar conteúdo massivo:
+
+Instagram
+YouTube
+TikTok
+
+Exemplo
+
+“Desafio 30 dias desenhando”
+
+---
+
+## Fase 2 — Primeira turma
+
+Evento online:
+
+Semana do Desenho OBA
+
+3 aulas gratuitas.
+
+---
+
+## Fase 3 — Escala
+
+Anúncios rodando continuamente.
+
+---
+
+## Fase 4 — Ecossistema
+
+A OBA pode virar:
+
+* comunidade artística
+* marketplace de professores
+* escola global
+
+---
+
+# Conclusão
+
+OBA Online não deve ser apenas **um curso de desenho**.
+
+Ela pode se tornar:
+
+Uma **plataforma de educação artística digital**, com múltiplas fontes de receita e alcance nacional.
+
+O mercado de cursos online está em expansão e faz parte da chamada **creator economy**, que movimenta centenas de bilhões de dólares globalmente. ([Hotmart][2])
+
+Se bem estruturada, a OBA Online pode evoluir para:
+
+* maior escola de desenho online do Brasil
+* comunidade artística nacional
+* marketplace de professores
+
+---
+
+✅ Se quiser, no próximo passo posso te entregar algo **ainda mais poderoso**:
+
+* **Mapa visual da arquitetura da OBA Online (tipo blueprint de startup)**
+* **Plano para chegar a 10 mil alunos**
+* **Estrutura completa do primeiro curso (Realismo OBA)**
+* **Plano de marketing de lançamento que pode gerar 500k+**
+* **Modelo de contrato profissional entre Leonardo, Vanderson e professores**
+
+Isso já entra em **nível de criação de uma edtech real**. 🎨🚀
+
+[1]: https://www.eadsimples.com.br/tecnologia/modelos-de-negocio-em-ead-7-opcoes-para-empreender-com-cursos-online/?utm_source=chatgpt.com "Modelos de negócio em EaD para empreender com cursos ..."
+[2]: https://hotmart.com/pt-br/blog/como-vender-cursos-online?utm_source=chatgpt.com "Como vender cursos online: 12 dicas para lucrar vendendo!"
+

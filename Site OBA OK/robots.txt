@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://oficinabelasartes.com.br/sitemap.xml
+
+# Bloquear arquivos de sistema
+Disallow: /.agent/
+Disallow: /docs/
+Disallow: /.ftpquota
+Disallow: /.htaccess

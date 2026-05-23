@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+    --color-yellow: #f7c718;
+    --color-brown: #39231f;
+    --color-teal: #00a093;
+    --color-blue-dark: #336987;
+    --color-orange: #d97d19;
+    --color-white: #ffffff;
+    --off-white: #FDFDFD;
+    --font-heading: 'Fredoka', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --border-radius: 20px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-body);
+    background: var(--off-white);
+    color: var(--color-brown);
+    overflow: hidden; /* Scroll controlado pelo container main */
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* --- SIDEBAR INFOGRÁFICA --- */
+.sidebar {
+    width: 320px;
+    background: var(--color-brown);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.sidebar h2 { color: var(--color-yellow); font-family: var(--font-heading); margin-bottom: 30px; }
+
+.nav-menu { list-style: none; flex: 1; }
+.nav-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.nav-item i { font-size: 1.2rem; }
+.nav-item:hover { background: rgba(255,255,255,0.05); color: white; }
+.nav-item.active { background: var(--color-teal); color: white; box-shadow: 0 10px 20px rgba(0, 160, 147, 0.3); }
+
+/* --- ÁREA DE CONTEÚDO --- */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 60px 80px;
+    scroll-behavior: smooth;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3E%3C/filter%3%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3E%3C/svg%3%3E");
+    background-blend-mode: overlay;
+}
+
+/* --- ESTILO INFOGRÁFICO --- */
+.section-title { font-size: 3rem; margin-bottom: 10px; font-family: var(--font-heading); }
+.section-lead { font-size: 1.2rem; margin-bottom: 50px; color: var(--color-teal); font-weight: 600; }
+
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px; }
+
+.info-card {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card h3 { color: var(--color-teal); margin-bottom: 15px; font-family: var(--font-heading); font-size: 1.5rem; }
+.info-card ul { margin-left: 20px; margin-top: 15px; }
+.info-card li { margin-bottom: 10px; font-size: 1.05rem; }
+
+.high-tag {
+    background: var(--color-yellow);
+    color: var(--color-brown);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Accordion Style para detalhes densos */
+.detail-box {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border-left: 5px solid var(--color-teal);
+}
+
+.detail-box h4 { margin-bottom: 10px; color: var(--color-blue-dark); }
+
+.highlight-box {
+    background: var(--color-teal);
+    color: white;
+    padding: 50px;
+    border-radius: 30px;
+    margin: 50px 0;
+}
+
+/* Gráficos */
+.chart-container { margin: 40px 0; background: white; padding: 30px; border-radius: 20px; border: 1px solid #eee; }
+
+@media (max-width: 1024px) {
+    .sidebar { width: 80px; padding: 20px 10px; }
+    .sidebar h2, .nav-item span { display: none; }
+    .main-content { padding: 40px 20px; }
+}

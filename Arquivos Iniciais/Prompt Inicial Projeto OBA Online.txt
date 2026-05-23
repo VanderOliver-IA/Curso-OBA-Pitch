@@ -1,0 +1,377 @@
+# PROMPT ESTRUTURADO – PROJETO OBA ONLINE
+
+Você é um **estrategista especialista em negócios digitais, educação online, marketing de cursos e estruturação de produtos educacionais escaláveis**.
+
+Seu objetivo é **analisar, estruturar e planejar o lançamento da plataforma de cursos online da marca Oficina Belas Artes (OBA)**.
+
+Este projeto deve considerar **modelo de negócio, estrutura pedagógica, marketing, monetização, tecnologia e divisão financeira entre os sócios**.
+
+---
+
+# 1. CONTEXTO DA MARCA
+
+A **Oficina Belas Artes (OBA)** é uma escola de arte que ensina desenho e pintura para todas as idades com uma metodologia inclusiva baseada no princípio:
+
+**“A arte é para todos.”** 
+
+A marca evoluiu da antiga **Esboço Artes** e atualmente possui unidades físicas no **Méier e Tijuca** no Rio de Janeiro. 
+
+A OBA possui cursos como:
+
+* Mangá
+* Cartoon & HQ
+* Desenho Realista
+* Moda
+* Pintura em Tela
+* Comunicação Visual
+* Cenário & Ambientação
+
+Além disso, possui material didático próprio (apostilas) para acelerar a evolução dos alunos. 
+
+O posicionamento da marca é:
+
+* Inclusivo
+* Inspirador
+* Técnico, mas acessível
+* Focado no desenvolvimento artístico progressivo
+
+A mascote **Arty** representa o universo criativo da escola e funciona como guia para os alunos dentro da experiência da marca. 
+
+---
+
+# 2. OBJETIVO DO PROJETO
+
+Criar uma **plataforma de cursos online da OBA** que permita escalar o ensino artístico para todo o Brasil (e potencialmente internacional).
+
+O objetivo é que:
+
+* A **marca OBA seja o protagonista**, não os professores.
+* Professores sejam **especialistas convidados** para ensinar técnicas específicas.
+* A escola se torne uma **plataforma de ensino artístico digital**.
+
+---
+
+# 3. MODELO DE PRODUTO EDUCACIONAL
+
+A plataforma terá **diferentes formas de monetização**, permitindo múltiplas fontes de receita.
+
+### 1️⃣ Venda por módulo
+
+Exemplo:
+
+Curso: **Realismo**
+
+Módulos individuais:
+
+* Fundamentos do Realismo
+* Sombreamento
+* Texturas
+* Retrato humano
+* Luz e contraste
+
+O aluno pode comprar **apenas um módulo específico**.
+
+Exemplo:
+
+Comprar apenas o módulo **Sombreamento Realista**.
+
+---
+
+### 2️⃣ Venda de curso completo
+
+O aluno pode comprar:
+
+Curso completo com todos os módulos.
+
+Exemplo:
+
+Curso Completo de **Desenho Realista OBA**
+
+---
+
+### 3️⃣ Assinatura vitalícia da escola
+
+Produto premium:
+
+**OBA Online – Escola Completa**
+
+O aluno paga uma vez e recebe acesso vitalício a:
+
+* Todos os cursos atuais
+* Todos os cursos futuros
+
+Esse modelo cria:
+
+* receita antecipada
+* comunidade forte
+* fidelização
+
+---
+
+# 4. TIPOS DE CURSOS QUE A OBA ONLINE TERÁ
+
+A plataforma poderá ter:
+
+### Cursos completos
+
+Exemplo:
+
+* Formação em Desenho Realista
+* Formação em Mangá
+* Formação em Cartoon
+
+---
+
+### Cursos rápidos
+
+Cursos mais curtos e específicos.
+
+Exemplo:
+
+* Como desenhar mãos
+* Anatomia básica
+* Expressões faciais
+* Criação de personagens
+* Sombreamento profissional
+
+---
+
+### Masterclasses
+
+Cursos especializados com artistas convidados.
+
+---
+
+### Trilhas de aprendizado
+
+Exemplo:
+
+Trilha Mangá:
+
+1 Anatomia estilo anime
+2 Expressões
+3 Dinâmica de poses
+4 Criação de personagens
+5 Narrativa visual
+
+---
+
+# 5. MODELO DE ESTRUTURA DO NEGÓCIO
+
+O projeto possui **3 participantes principais**.
+
+---
+
+## 1️⃣ Leonardo
+
+Dono da marca **Oficina Belas Artes**
+
+Responsável por:
+
+* marca
+* reputação
+* autoridade
+* estrutura educacional existente
+* investimento financeiro inicial
+
+Especialmente:
+
+* tráfego pago
+* marketing de aquisição
+
+---
+
+## 2️⃣ Vanderson (OláMundoDigital)
+
+Especialista em marketing estratégico e lançamentos.
+
+Responsável por:
+
+* estratégia digital
+* funil de vendas
+* landing pages
+* área de membros
+* estrutura técnica
+* criativos
+* campanhas
+* copywriting
+* produção e edição técnica dos vídeos
+
+Não entra com investimento financeiro direto.
+
+---
+
+## 3️⃣ Professores
+
+Responsáveis por:
+
+* criação das aulas
+* conteúdo artístico
+* técnicas
+* didática da arte
+
+Eles não entram com investimento financeiro.
+
+---
+
+# 6. MODELO DE DIVISÃO DE LUCROS (IDEIA INICIAL)
+
+A divisão proposta inicialmente é:
+
+Leonardo → **35%**
+
+Vanderson → **35%**
+
+Professor → **20%**
+
+Caixa do projeto → **10%**
+
+O objetivo é criar um modelo que leve em consideração:
+
+* investimento financeiro
+* investimento intelectual
+* tempo de trabalho
+* valor estratégico para o negócio
+
+---
+
+# 7. REFERÊNCIA DE MERCADO
+
+Curso analisado como referência:
+
+[https://kidsartstudio.com.br/](https://kidsartstudio.com.br/)
+
+Esse curso foi adquirido para analisar:
+
+* estrutura de curso
+* preços
+* organização de módulos
+* experiência do aluno
+* plataforma
+
+Use essa referência para entender:
+
+* padrões de mercado
+* pontos fortes
+* pontos fracos
+* melhorias possíveis.
+
+---
+
+# 8. PÚBLICO-ALVO
+
+A OBA atende diferentes públicos:
+
+* crianças
+* adolescentes
+* adultos
+* pessoas que querem hobby
+* pessoas que querem carreira artística 
+
+Para o **online**, os principais públicos serão:
+
+* adolescentes fãs de anime e mangá
+* jovens adultos criativos
+* adultos que querem aprender desenho
+* iniciantes que acreditam que não sabem desenhar
+
+---
+
+# 9. OBJETIVOS DA ANÁLISE
+
+Com base em tudo isso, você deve:
+
+### 1️⃣ Criar a estrutura ideal da plataforma OBA Online
+
+* produtos
+* cursos
+* trilhas
+* certificações
+* comunidade
+
+---
+
+### 2️⃣ Definir o melhor modelo de monetização
+
+* módulos
+* cursos completos
+* assinatura
+* acesso vitalício
+* combos
+
+---
+
+### 3️⃣ Estruturar o funil de vendas ideal
+
+Exemplo:
+
+conteúdo gratuito
+↓
+aula gratuita
+↓
+mini curso
+↓
+curso completo
+↓
+assinatura OBA
+
+---
+
+### 4️⃣ Criar a arquitetura técnica
+
+* plataforma de cursos
+* área de membros
+* hospedagem
+* distribuição de conteúdo
+
+---
+
+### 5️⃣ Criar a estrutura de lançamento
+
+* pré-lançamento
+* lançamento
+* perpétuo
+
+---
+
+### 6️⃣ Estruturar o modelo financeiro ideal
+
+Incluindo:
+
+* divisão de lucros
+* cálculo de contribuição
+* valorização do conhecimento técnico
+* modelo justo entre sócios e professores
+
+---
+
+### 7️⃣ Criar ideias para escalar o projeto
+
+Como:
+
+* franquia digital
+* marketplace de professores
+* comunidade de artistas
+* eventos online
+* certificações
+
+---
+
+# 10. RESULTADO ESPERADO DA ANÁLISE
+
+A resposta final deve entregar:
+
+1️⃣ Estrutura completa da **OBA Online**
+2️⃣ Modelo de negócios escalável
+3️⃣ Estrutura de monetização
+4️⃣ Estrutura de cursos
+5️⃣ Estrutura técnica
+6️⃣ Modelo financeiro equilibrado
+7️⃣ Estratégia de crescimento
+
+---
+
+# RESULTADO ESPERADO
+
+Um **plano estratégico completo para transformar a OBA em uma plataforma de ensino artístico digital escalável**.
+

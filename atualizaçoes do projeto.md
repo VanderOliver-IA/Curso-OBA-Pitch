@@ -1,0 +1,3 @@
+- V1.01.01: Ajuste no entrypoint server.js para delegar a execução diretamente ao standalone do Next.js.
+- V1.01.00: Lançamento da Landing Page OBA Gávea com formulário, FAQ, localização e rastreamento completo.
+- V1.00.00: Versão inicial da migração para Next.js.
