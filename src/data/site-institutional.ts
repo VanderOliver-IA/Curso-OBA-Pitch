@@ -100,7 +100,7 @@ export const siteData = {
       { day: "Quinta", slots: ["08h às 10h", "10h às 12h", "14h às 16h", "16h às 18h", "18h às 20h"] },
       { day: "Sexta", slots: ["08h às 10h", "10h às 12h", "14h às 16h", "16h às 18h", "18h às 20h"] },
       { day: "Sábado", slots: ["08h às 10h", "10h às 12h", "12h às 14h", "14h às 16h", "Avulsa 16h-20h"] },
-      { day: "Domingo", slots: ["-", "-", "-", "Aula Avulsa", "14h às 21h"] },
+      { day: "Domingo", slots: ["-", "-", "-", "Aula Avulsa", "13h às 20h"] },
     ]
   },
   unidades: [
