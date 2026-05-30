@@ -1,3 +1,5 @@
+- V1.01.03: Seletor dinâmico de unidades no formulário de contato (WhatsApp/E-mail personalizados) e botões "Fale com OBA" individualizados por unidade.
+- V1.01.02: Atualização dos horários de funcionamento de domingo da unidade Gávea.
 - V1.01.01: Ajuste no entrypoint server.js para delegar a execução diretamente ao standalone do Next.js.
 - V1.01.00: Lançamento da Landing Page OBA Gávea com formulário, FAQ, localização e rastreamento completo.
 - V1.00.00: Versão inicial da migração para Next.js.

@@ -106,29 +106,35 @@ export const siteData = {
   unidades: [
     {
       name: "Méier",
+      slug: "meier",
       address1: "R. Ana Barbosa, 47",
       address2: "Méier, Rio de Janeiro - RJ",
       cep: "CEP: 20735-120",
       whatsapp: "(21) 97640-6960",
       whatsappLink: "5521976406960",
+      email: "obameier@gmail.com",
       map: "https://www.google.com/maps/search/?api=1&query=R.+Ana+Barbosa,+47+-+Méier,+Rio+de+Janeiro+-+RJ,+20735-120"
     },
     {
       name: "Tijuca",
+      slug: "tijuca",
       address1: "R. Maj. Ávila, 371",
       address2: "Tijuca, Rio de Janeiro - RJ",
       cep: "CEP: 21862-765",
       whatsapp: "(21) 96726-1725",
       whatsappLink: "5521967261725",
+      email: "obatijuca@gmail.com",
       map: "https://www.google.com/maps/search/?api=1&query=R.+Maj.+Ávila,+371+-+Tijuca,+Rio+de+Janeiro+-+RJ,+21862-765"
     },
     {
       name: "Shopping da Gávea",
+      slug: "gavea",
       address1: "Marquês de São Vicente, 52 Loja n14 segundo piso",
       address2: "Gávea, Rio de Janeiro - RJ",
       cep: "CEP: 22451-040",
       whatsapp: "(21) 97464-3331",
       whatsappLink: "5521974643331",
+      email: "obagavea@gmail.com",
       map: "https://maps.app.goo.gl/n2771CpQLBE8hQsG8"
     }
   ],

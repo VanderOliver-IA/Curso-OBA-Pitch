@@ -1,8 +1,8 @@
 # 📋 AllChat — 03 - Site OBA
 
 > **Contexto do Projeto:** Histórico completo de conversas e decisões.
-> **Última atualização:** 21/05/2026 23:57:00
-> **Total de conversas salvas:** 3
+> **Última atualização:** 30/05/2026 13:48:00
+> **Total de conversas salvas:** 5
 
 ---
 
@@ -13,6 +13,8 @@
 | 1 | 15/05/2026 | Onde paramos? | `default` | `2e565d6c-e650-46d3-9a39-ee93f49b2112` |
 | 2 | 15/05/2026 |  | `frontend-specialist...` | `39ff500b-492d-4026-9009-46a4a886f19c` |
 | 3 | 21/05/2026 | Criação e Deploy da Landing Page OBA Gávea | `project-planner / orchestrator` | `9c8c278e-acfc-48c7-9b19-239f0fec0da0` |
+| 4 | 25/05/2026 | Linha do Tempo e Histórico Técnico do Projeto | `project-planner / frontend-specialist` | `2f3a08fa-7301-4581-84f1-2d6469fd3c14` |
+| 5 | 30/05/2026 | Escolha de Unidade e Botões Customizados | `frontend-specialist` | `fb8c249f-a131-4d39-8854-eba7ef4faa56` |
 
 ---
 
@@ -724,4 +726,68 @@
 
 🤖 **Antigravity**:
 > [Investigação do ambiente virtual Node 20 no cPanel. Identificado que o Passenger executa o `server.js` na raiz do site, que tentava inicializar o compilador padrão do Next.js ao invés de delegar a execução ao standalone otimizado, gerando o crash de memória. Modificado o `server.js` raiz para chavear o diretório de trabalho (`process.chdir`) para o diretório `.next/standalone` e invocar diretamente o servidor compilado. Sincronizados os arquivos com o servidor (V1.01.01), resultando em sucesso absoluto com carregamento instantâneo da Landing Page!]
+
+---
+
+## 💬 Conversa 4: 2f3a08fa-7301-4581-84f1-2d6469fd3c14
+
+- **Data:** 25/05/2026 14:35
+- **ID da Conversa:** `2f3a08fa-7301-4581-84f1-2d6469fd3c14`
+- **Agente(s) Aplicado(s):** `@project-planner / @frontend-specialist`
+- **Ferramentas Utilizadas:** `list_dir`, `view_file`, `write_to_file`, `run_command`, `replace_file_content`, `multi_replace_file_content`
+- **Arquivos Envolvidos:** `timeline Projeto OBA.md`, `atualizaçoes do projeto.md`, `allchat-03 - Site OBA.md`, `src/data/site-institutional.ts`, `src/components/Footer.tsx`
+
+### Diálogo
+
+🧑 **Usuário**:
+> pode me dizer oque foi feito no site OBA?
+
+🤖 **Antigravity**:
+> [Apresenta o resumo detalhado de todas as realizações do site OBA, dividindo em migração core, rotas dinâmicas de cursos, página de parceiros, lançamento Gávea e deploys em produção no cPanel Napoleon.]
+
+🧑 **Usuário**:
+> Crie um arquivo chamado timeline Projeto OBA.md com toda essa informaçao
+
+🤖 **Antigravity**:
+> [Cria o arquivo timeline Projeto OBA.md contendo a linha do tempo e histórico técnico completo do site OBA no diretório raiz do workspace, registrando tudo nos formatos de versionamento e infraestrutura.]
+
+🧑 **Usuário**:
+> faça o deploy, nao esqueça a regra de versionamento e guardiao de contexto
+
+🤖 **Antigravity**:
+> [Identifica a alteração de horário de domingo da Gávea ("13h às 20h"). Realiza o bump de versão para V1.01.02 em Footer.tsx, atualizaçoes do projeto.md e timeline Projeto OBA.md. Compila o build de produção local via webpack com sucesso (npm run build --webpack). Adiciona as modificações e realiza o commit release. Ao tentar realizar o deploy (git push cpanel master/rsync), o servidor Napoleon Host autentica a chave de acesso SSH, mas reseta a conexão logo em seguida (Connection reset by peer). Indica que pode ser um bloqueio temporário do firewall CSF ou limitação na conta SSH do provedor.]
+
+## 💬 Conversa 5: fb8c249f-a131-4d39-8854-eba7ef4faa56
+
+- **Data:** 30/05/2026 13:48
+- **ID da Conversa:** `fb8c249f-a131-4d39-8854-eba7ef4faa56`
+- **Agente(s) Aplicado(s):** `@frontend-specialist`
+- **LLM Ativa:** `Claude 3.5 Sonnet / Gemini 3.5 Flash`
+- **Ferramentas Utilizadas:** `list_dir`, `view_file`, `grep_search`, `write_to_file`, `multi_replace_file_content`, `replace_file_content`, `run_command`
+- **Arquivos Envolvidos:** `src/data/site-institutional.ts`, `src/components/LocationSection.tsx`, `src/app/globals.css`, `package.json`, `atualizaçoes do projeto.md`, `allchat-03 - Site OBA.md`, `src/components/Footer.tsx`
+
+### Diálogo
+
+🧑 **Usuário**:
+> Na parte de fale com a gente, precisa ter uma opçao de: Escolha sua unidade e entao deve abrir 3 opçoes, gávea, meier e tijuca, e entao a opçao de enviar mensagem, whatsapp e email deve ser personalizada para cada uma, ou seja, a intençao e fzer com que cada mensagem chegue para unidade certa!
+> Ao lado onde tem o whatsapp de cada unidade, deve ter um botao, fale com oba meier, fale com oba tijuca, fale com oba gavea
+> Antes de começar, me diga se entendeu e se tem acesso a tudo que precisa!
+
+🤖 **Antigravity** (`@frontend-specialist`):
+> Entendido! Tenho acesso a tudo que preciso. Vou resumir o que entendi e o plano de execução:
+> 1. Selector "Escolha sua unidade" no formulário de contato com as 3 opções.
+> 2. Envio de mensagem (WhatsApp e E-mail) personalizado de acordo com a unidade selecionada.
+> 3. Botão "Fale com OBA [Unidade]" ao lado do WhatsApp de cada card da esquerda que pré-seleciona ou abre o contato daquela unidade.
+
+🧑 **Usuário**:
+> os emais precisam ser obagavea@gmail.com, obameier@gmail.com, obatijuca@gmail.com
+
+🤖 **Antigravity** (`@frontend-specialist`):
+> Perfeito! Adicionado campo de e-mail e slug dinâmico para as unidades no arquivo de dados.
+> Reescrevi o formulário do `LocationSection.tsx` implementando a lógica completa em React (state para a unidade selecionada, envio de WhatsApp e E-mail dinâmico baseados na seleção).
+> Adicionei os botões "Fale com OBA [Unidade]" e o seletor "Selecionar para contato" em cada card correspondente da unidade.
+> Atualizei o `globals.css` com as novas regras visuais para os botões e tabs do seletor, respeitando a identidade visual (Teal, Amarelo e Grafite) e mantendo tudo 100% responsivo e elegante.
+
+---
+
 
