@@ -11,7 +11,7 @@ export const siteData = {
     ],
     cta: {
       label: "Agendar Aula Experimental",
-      href: "https://wa.me/5521976406960",
+      href: "/#localizacao",
     }
   },
   hero: {
@@ -20,7 +20,7 @@ export const siteData = {
         tagline: "Transformando paixão em domínio técnico",
         title: "Sua arte levada a sério.",
         description: "Na Oficina Belas Artes, você aprende técnica de verdade para expressar sua visão única. Sem julgamentos, apenas evolução.",
-        cta: { label: "Começar Aula Experimental", href: "https://wa.me/5521976406960" },
+        cta: { label: "Começar Aula Experimental", href: "/#localizacao" },
         image: "/images/hero-desktop/arty-2.png",
         stats: "+2.000 alunos transformados",
         floats: ["Técnica Real", "Criação Livre"]

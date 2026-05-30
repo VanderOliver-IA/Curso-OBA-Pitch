@@ -6,15 +6,51 @@ import { useState } from "react";
 export function Footer() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [logoVisible, setLogoVisible] = useState(true);
+  const [isWhatsAppMenuOpen, setIsWhatsAppMenuOpen] = useState(false);
 
   return (
     <>
       {/* Floating Elements */}
       <div id="floating-elements-container">
-        {/* WhatsApp Float */}
-        <a href="https://wa.me/5521976406960" target="_blank" rel="noopener noreferrer" className="float-wa" aria-label="Contato pelo WhatsApp">
-          <i className="fab fa-whatsapp" aria-hidden="true"></i>
-        </a>
+        {/* WhatsApp Float with Popover Menu */}
+        <div className="float-wa-container">
+          {isWhatsAppMenuOpen && (
+            <div className="float-wa-popover glass animate-scale-up">
+              <div className="popover-header">
+                <img src="/images/logo-oba-arty.png" alt="OBA" className="popover-logo" />
+                <div className="popover-title-group">
+                  <h4>Fale com a OBA! 🎨</h4>
+                  <p>Escolha a unidade no WhatsApp:</p>
+                </div>
+                <button onClick={() => setIsWhatsAppMenuOpen(false)} className="popover-close-btn" aria-label="Fechar menu">
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+              <div className="popover-options">
+                <a href="https://wa.me/5521976406960" target="_blank" rel="noopener noreferrer" className="popover-btn btn-meier" onClick={() => setIsWhatsAppMenuOpen(false)}>
+                  <i className="fab fa-whatsapp"></i>
+                  <span>OBA Méier</span>
+                </a>
+                <a href="https://wa.me/5521967261725" target="_blank" rel="noopener noreferrer" className="popover-btn btn-tijuca" onClick={() => setIsWhatsAppMenuOpen(false)}>
+                  <i className="fab fa-whatsapp"></i>
+                  <span>OBA Tijuca</span>
+                </a>
+                <a href="https://wa.me/5521974643331" target="_blank" rel="noopener noreferrer" className="popover-btn btn-gavea" onClick={() => setIsWhatsAppMenuOpen(false)}>
+                  <i className="fab fa-whatsapp"></i>
+                  <span>OBA Gávea</span>
+                </a>
+              </div>
+            </div>
+          )}
+          <button 
+            onClick={() => setIsWhatsAppMenuOpen(!isWhatsAppMenuOpen)} 
+            className={`float-wa ${isWhatsAppMenuOpen ? "active" : ""}`} 
+            aria-label="Contato pelo WhatsApp"
+            aria-expanded={isWhatsAppMenuOpen}
+          >
+            <i className="fab fa-whatsapp" aria-hidden="true"></i>
+          </button>
+        </div>
 
         {/* Scroll Top (Simple version, animation normally handled by JS) */}
         <div 
@@ -42,7 +78,7 @@ export function Footer() {
             <i className="fas fa-paint-brush"></i>
             <span>Cursos</span>
           </button>
-          <a href="https://wa.me/5521976406960" className="app-item highlight">
+          <a href="/#localizacao" className="app-item highlight">
             <div className="highlight-circle">
               <i className="fas fa-calendar-check"></i>
             </div>

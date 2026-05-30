@@ -24,7 +24,7 @@ export default function Home() {
         <div className="container text-center reveal">
           <h2>Pronto para começar sua jornada?</h2>
           <p>A primeira aula é por nossa conta. Venha experimentar sem compromisso.</p>
-          <a href="https://wa.me/5521976406960" className="btn btn-primary btn-lg">
+          <a href="#localizacao" className="btn btn-primary btn-lg">
             Agendar Aula Experimental Gratuita
           </a>
           <img src="images/arty-4.png" alt="Arty Mascote da OBA" className="arty-footer" data-speed="0.05" loading="lazy" decoding="async" width="300" height="300" />

@@ -47,7 +47,7 @@ export default async function CoursePage(props: Props) {
             <h1 className="animate-text delay-1">{data.title}</h1>
             <p className="animate-text delay-2">{data.heroDescription}</p>
             <div className="hero-ctas animate-text delay-3">
-              <a href="https://wa.me/5521976406960" className="btn btn-primary btn-lg">
+              <a href="/#localizacao" className="btn btn-primary btn-lg">
                 <span>Agendar Aula Experimental</span>
                 <i className="fas fa-arrow-right"></i>
               </a>
@@ -101,7 +101,7 @@ export default async function CoursePage(props: Props) {
           <div className="cta-box animate-up">
             <h3>Pronto para começar?</h3>
             <p>A primeira aula é para você sentir a energia da OBA na prática. Sem compromisso.</p>
-            <a href="https://wa.me/5521976406960" className="btn btn-primary btn-lg">
+            <a href="/#localizacao" className="btn btn-primary btn-lg">
               Quero minha Aula Experimental Gratuita
             </a>
           </div>

@@ -37,7 +37,7 @@ export function Navbar() {
           <li><Link href="/parceiro" className="nav-item">Parceiro</Link></li>
           <li><Link href="/#localizacao" className="nav-item">Unidades</Link></li>
         </ul>
-        <a href="https://wa.me/5521976406960" className="btn btn-primary desktop-cta">Agendar Aula Experimental</a>
+        <a href="/#localizacao" className="btn btn-primary desktop-cta">Agendar Aula Experimental</a>
       </div>
     </nav>
   );

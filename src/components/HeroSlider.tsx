@@ -37,7 +37,7 @@ export function HeroSlider() {
               <h1 className="animate-text delay-2">Sua arte levada <br />a <span className="highlight">sério.</span></h1>
               <p className="animate-text delay-3">Na Oficina Belas Artes, você aprende técnica de verdade para expressar sua visão única. Sem julgamentos, apenas evolução.</p>
               <div className="hero-ctas animate-text delay-4">
-                <a href="https://wa.me/5521976406960" className="btn btn-hero-glass">
+                <a href="#localizacao" className="btn btn-hero-glass">
                   <span>Começar Aula Experimental</span>
                   <i className="fas fa-arrow-right"></i>
                 </a>

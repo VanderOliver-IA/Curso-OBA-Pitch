@@ -7,7 +7,7 @@ export function LocationSection() {
   const [selectedUnit, setSelectedUnit] = useState<number | null>(null);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [course, setCourse] = useState("");
+  const [course, setCourse] = useState("Agendar Aula Experimental");
   const [message, setMessage] = useState("");
 
   const unit = selectedUnit !== null ? siteData.unidades[selectedUnit] : null;
@@ -177,6 +177,7 @@ export function LocationSection() {
                     onChange={(e) => setCourse(e.target.value)}
                   >
                     <option value="" disabled>Tenho interesse em...</option>
+                    <option value="Agendar Aula Experimental">Agendar Aula Experimental</option>
                     <option value="Arte Geral">Conhecer a Escola (Geral)</option>
                     <option value="Mangá">Mangá</option>
                     <option value="Desenho Realista">Desenho Realista</option>
