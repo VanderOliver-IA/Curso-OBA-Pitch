@@ -90,7 +90,7 @@ export const siteData = {
     ],
     tijuca: [
       { day: "Terça", slots: ["08h às 10h", "10h às 12h", "14h às 16h", "16h às 18h", "18h às 19:30h"] },
-      { day: "Quarta", slots: ["-", "15h às 17h", "-", "-", "-"] },
+      { day: "Quarta", slots: ["-", "15h às 17h", "17h às 19h", "-", "-"] },
       { day: "Quinta", slots: ["08h às 10h", "10h às 12h", "14h às 16h", "16h às 18h", "18h às 19:30h"] },
       { day: "Sexta", slots: ["08h às 10h", "10h às 12h", "13h às 15h", "15h às 17h", "17h às 19h"] },
       { day: "Sábado", slots: ["08h às 10h", "10h às 12h", "12h às 14h", "14h às 16h", "-"] },
@@ -99,8 +99,7 @@ export const siteData = {
       { day: "Terça", slots: ["08h às 10h", "10h às 12h", "14h às 16h", "16h às 18h", "18h às 20h"] },
       { day: "Quinta", slots: ["08h às 10h", "10h às 12h", "14h às 16h", "16h às 18h", "18h às 20h"] },
       { day: "Sexta", slots: ["08h às 10h", "10h às 12h", "14h às 16h", "16h às 18h", "18h às 20h"] },
-      { day: "Sábado", slots: ["08h às 10h", "10h às 12h", "12h às 14h", "14h às 16h", "Avulsa 16h-20h"] },
-      { day: "Domingo", slots: ["-", "-", "-", "Aula Avulsa", "13h às 20h"] },
+      { day: "Sábado", slots: ["08h às 10h", "10h às 12h", "12h às 14h", "14h às 16h", "-"] },
     ]
   },
   unidades: [
