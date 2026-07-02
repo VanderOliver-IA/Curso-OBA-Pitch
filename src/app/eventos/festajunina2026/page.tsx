@@ -341,34 +341,23 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
           background-size: 24px 24px;
         }
 
-        .decorations-top {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 40px;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0 0 L10 20 L20 0 L30 20 L40 0 L50 20 L60 0 L70 20 L80 0 L90 20 L100 0 Z' fill='%23d84315'/%3E%3C/svg%3E");
-          background-size: 100px 30px;
-          background-repeat: repeat-x;
-          opacity: 0.85;
-          z-index: 10;
-        }
-
         .banner-junino {
-          background: linear-gradient(135deg, #e65100, #ff8f00);
+          background: linear-gradient(135deg, #ff9800, #ffb300);
           color: #fff;
-          padding: 80px 20px 60px 20px;
+          padding: 50px 20px 30px 20px;
           text-align: center;
           position: relative;
-          border-bottom: 8px solid #ffb300;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+          border-bottom: 4px solid #ffe082;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          margin-top: 10px;
+          border-radius: 0 0 30px 30px;
         }
 
         .banner-junino h1 {
           font-family: 'Fredoka', cursive;
-          font-size: 3rem;
+          font-size: 2.5rem;
           font-weight: 700;
-          text-shadow: 2px 2px 0px #b71c1c;
+          text-shadow: 1px 1px 0px #e65100;
           margin-bottom: 12px;
           letter-spacing: -0.5px;
         }
@@ -802,6 +791,10 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
           to { opacity: 1; transform: translateY(0); }
         }
 
+        .step-container {
+          animation: fadeIn 0.4s ease-out;
+        }
+
         .error-message-box {
           background-color: #ffebee;
           color: #c62828;
@@ -816,7 +809,6 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
       `}</style>
 
       <div className="festajunina-page">
-        <div className="decorations-top" />
         
         <header className="banner-junino">
           <div className="container">
@@ -862,7 +854,7 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
 
             {/* ETAPA 1: Identificação */}
             {step === 1 && (
-              <form onSubmit={handleNextToStep2} className="reveal">
+              <form onSubmit={handleNextToStep2} className="step-container">
                 <h3 className="step-title">Etapa 1: Quem vai levar?</h3>
                 
                 <div className="form-group">
@@ -928,38 +920,6 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
                   </select>
                 </div>
 
-                {/* Resumo público dinâmico */}
-                {eventDate && classId && (
-                  <div className="summary-card">
-                    <h4>
-                      <i className="fa fa-list-check" /> 
-                      Itens já escolhidos para esta turma:
-                    </h4>
-                    
-                    {loadingSummary ? (
-                      <div className="summary-empty">Carregando os itens já escolhidos para essa turma...</div>
-                    ) : errorSummary ? (
-                      <div className="summary-empty" style={{ color: "#d84315" }}>{errorSummary}</div>
-                    ) : Object.keys(publicSummary).length === 0 ? (
-                      <div className="summary-empty">
-                        Ainda não temos contribuições registradas para essa turma. Você pode ser o primeiro a escolher! 🎨🌽
-                      </div>
-                    ) : (
-                      <ul className="summary-list">
-                        {Object.entries(publicSummary).map(([itemName, count]) => (
-                          <li key={itemName} className="summary-item">
-                            <span>{itemName}</span>
-                            <span className="summary-count">{count}x</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    <p className="help-text" style={{ marginTop: "12px", fontSize: "0.8rem", fontStyle: "italic" }}>
-                      💡 Essas informações ajudam a escolher itens variados para a festa. Os nomes das famílias são confidenciais.
-                    </p>
-                  </div>
-                )}
-
                 <div className="btn-junino-container">
                   <button type="submit" className="btn-junino btn-junino-primary">
                     Continuar <i className="fa fa-arrow-right" />
@@ -970,7 +930,7 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
 
             {/* ETAPA 2: Escolha do lanche */}
             {step === 2 && (
-              <form onSubmit={handleNextToStep3} className="reveal">
+              <form onSubmit={handleNextToStep3} className="step-container">
                 <h3 className="step-title">Etapa 2: O que você vai trazer?</h3>
 
                 <div className="form-group">
@@ -1003,16 +963,20 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
                       {!category ? "Selecione a categoria primeiro..." : "Selecione o item"}
                     </option>
                     {category &&
-                      CATEGORIES[category].map((i) => (
-                        <option key={i} value={i}>
-                          {i}
-                        </option>
-                      ))}
+                      CATEGORIES[category].map((i) => {
+                        const count = publicSummary[i] || 0;
+                        const labelCount = count > 0 ? ` (${count} ${count === 1 ? 'já escolhido' : 'já escolhidos'})` : '';
+                        return (
+                          <option key={i} value={i}>
+                            {i}{labelCount}
+                          </option>
+                        );
+                      })}
                   </select>
                 </div>
 
                 {item === "Outro item" && (
-                  <div className="form-group reveal">
+                  <div className="form-group step-container">
                     <label htmlFor="customItem">Qual item você pretende levar? <span>*</span></label>
                     <input
                       type="text"
@@ -1096,7 +1060,7 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
 
             {/* ETAPA 3: Revisão */}
             {step === 3 && (
-              <div className="reveal">
+              <div className="step-container">
                 <h3 className="step-title">Etapa 3: Confirmar Contribuição</h3>
                 <p style={{ textAlign: "center", color: "#8d6e63", marginBottom: "20px" }}>
                   Por favor, revise as informações antes de confirmar o envio.
@@ -1166,7 +1130,7 @@ ${successResponse.notes ? `- *Obs:* ${successResponse.notes}` : ""}`;
 
             {/* ETAPA 4: Sucesso */}
             {step === 4 && successResponse && (
-              <div className="success-box reveal">
+              <div className="success-box step-container">
                 <div className="success-icon">
                   <i className="fa fa-check" />
                 </div>
