@@ -1,7 +1,7 @@
 # 📋 AllChat — 03 - Site OBA
 
 > **Contexto do Projeto:** Histórico completo de conversas e decisões.
-> **Última atualização:** 02/07/2026 15:05:29
+> **Última atualização:** 02/07/2026 15:28:21
 > **Total de conversas salvas:** 5
 
 ---
@@ -22,8 +22,8 @@
 
 - **Data:** 15/05/2026 20:39
 - **ID da Conversa:** `2e565d6c-e650-46d3-9a39-ee93f49b2112`
-- **Ferramentas Utilizadas:** `write_to_file`, `command_status`, `list_dir`, `grep_search`, `view_file`, `replace_file_content`, `multi_replace_file_content`, `send_command_input`, `run_command`
-- **Arquivos Envolvidos:** `Footer.tsx`, `server.js`, `parceiro.php`, `senhas de acesso ssh napoleon.md`, `Schedule.tsx`, `parceiro.css`, `layout.tsx`, `package.json`, `Acesso Cpanel Napoleon.md`, `globals.css`, `.gitignore`, `Deploy Cpanel Napoleon.md`, `coursesData.ts`, `realismo.php`, `LocationSection.tsx`, `manga.php`, `ParceiroClient.tsx`, `next.config.mjs`, `Instagram.tsx`, `site-content.ts`, `page.tsx`, `tailwind.config.ts`, `Navbar.tsx`, `site-institutional.ts`, `Methodology.tsx`
+- **Ferramentas Utilizadas:** `run_command`, `multi_replace_file_content`, `command_status`, `send_command_input`, `view_file`, `grep_search`, `write_to_file`, `replace_file_content`, `list_dir`
+- **Arquivos Envolvidos:** `next.config.mjs`, `Instagram.tsx`, `Schedule.tsx`, `senhas de acesso ssh napoleon.md`, `page.tsx`, `coursesData.ts`, `site-content.ts`, `package.json`, `Deploy Cpanel Napoleon.md`, `layout.tsx`, `server.js`, `parceiro.css`, `globals.css`, `.gitignore`, `realismo.php`, `manga.php`, `Methodology.tsx`, `LocationSection.tsx`, `Navbar.tsx`, `site-institutional.ts`, `Acesso Cpanel Napoleon.md`, `parceiro.php`, `ParceiroClient.tsx`, `Footer.tsx`, `tailwind.config.ts`
 
 ### Diálogo
 
@@ -622,8 +622,8 @@
 
 - **Data:** 02/07/2026 17:49
 - **ID da Conversa:** `c6df781d-ebc0-4ac8-931a-3ef4a2d85e42`
-- **Ferramentas Utilizadas:** `command_status`, `list_dir`, `grep_search`, `view_file`, `replace_file_content`, `browser_subagent`, `send_command_input`, `run_command`
-- **Arquivos Envolvidos:** `Footer.tsx`, `Pastas Compartilhadas`, `server.js`, `allchat-03 - Site OBA.md`, `extract_and_generate_allchat.py`, `package.json`, `save-context.md`, `globals.css`, `SKILL.md`, `Deploy Cpanel Napoleon.md`, `atualizaçoes do projeto.md`, `site-institutional.ts`, `Schedule.tsx`, `github.md`
+- **Ferramentas Utilizadas:** `run_command`, `command_status`, `send_command_input`, `view_file`, `grep_search`, `write_to_file`, `replace_file_content`, `list_dir`, `browser_subagent`
+- **Arquivos Envolvidos:** `Schedule.tsx`, `festajunina2026.md`, `route.ts`, `atualizaçoes do projeto.md`, `page.tsx`, `Pastas Compartilhadas`, `layout.tsx`, `github.md`, `save-context.md`, `Deploy Cpanel Napoleon.md`, `package.json`, `extract_and_generate_allchat.py`, `SKILL.md`, `Footer.tsx`, `server.js`, `site-institutional.ts`, `globals.css`, `allchat-03 - Site OBA.md`
 
 ### Diálogo
 
@@ -655,6 +655,50 @@
 🧑 **Usuário**:
 > vc nao precisa acessar o site via browser, vc tem acesso total via api, tanto ao github para fazer o deploy quanto ao coolify se precisar de algo. + se precisar de algum acesso que tenha perdido, me avisa que eu te passo
 
+🤖 **Antigravity**:
+> Ajustes efetuados e deploy de produção em andamento! Aqui está o resumo das alterações realizadas:
+> 
+> ### 🛠️ Ajustes de Horários (`src/data/site-institutional.ts`)
+> 1. **Unidade Tijuca:**
+>    * Adicionada a nova turma de **quarta-feira das 17h às 19h** no terceiro slot do dia.
+> 2. **Unidade Gávea:**
+>    * **Domingo:** Agenda totalmente removida (o dia foi excluído da listagem da unidade).
+>    * **Sábado:** Removida a aula avulsa (`Avulsa 16h-20h`), deixando o slot vago.
+> 
+> ---
+> 
+> ### 📦 Versionamento & Documentação
+> *   **Versionamento:** Bump de versão no rodapé (`Footer.tsx`) para **`V1.01.05`** e no `package.json` para `1.1.4`.
+> *   **Histórico:** Atualizado o arquivo `atualizaçoes do projeto.md` incluindo as alterações das versões `V1.01.04` e `V1.01.05`.
+> 
+> ---
+> 
+> ### 🚀 Deploy & Persistência de Contexto
+> *   **Git Commit & Push:** Alterações enviadas com sucesso para a branch oficial **`oba-site-next`** no GitHub usando o token de acesso.
+> <truncated 382 bytes>
+
+🧑 **Usuário**:
+> Perfeito, parabens!!!!
+
+🤖 **Antigravity**:
+> Muito obrigado! Fico feliz em ajudar a manter o site da OBA sempre atualizado e com o fluxo de deploy funcionando redondo.
+> 
+> Se precisar de novos ajustes ou tiver outras solicitações para o projeto, é só chamar. Um ótimo trabalho por aí!
+
+🧑 **Usuário**:
+> Preciso criar uma nova pagina para os responsaveis dos alunos da OBA possam escolher os lanches que levarao para a festa junina, entao, criei um prd para voce entender a estrutura base.
+> /home/vanderoliver/Antigravity/Projetos/01 - Em Andamento/03 - Site OBA/Paginas adicionas posteriormente/festajunina2026.md
+> 
+> Entenda esse PRD para desenvolver, porem, quando criei o PRD ele nao tinha a informaçao de que o site da OBA ja existe e esta funcional e nao é feito em wordpress, por isso algumas vezes eles citam o wordpress.
+> 
+> Sobre banco de dados, pode e deve ter um banco de dados, porem, deve ser algo simples e funcional que nao precise de configuraçoes complexas.
+> 
+> Realmente nao vejo a necessidade uma senha para ver as respostas, pois apenas um link separado resolvera, porem, se achar que ficara melhor a visualizaçao da resposta, coloque apenas a senha simples: OBA@2026
+> 
+> O item nao deve aparecer no menu, ser um link enviado e nao ficara permanente no menu!
+> 
+> <truncated 1052 bytes>
+
 ---
 
 ## 💬 Conversa 3: 39ff500b-492d-4026-9009-46a4a886f19c
@@ -662,8 +706,8 @@
 - **Data:** 15/05/2026 19:11
 - **ID da Conversa:** `39ff500b-492d-4026-9009-46a4a886f19c`
 - **Agente(s) Aplicado(s):** `@frontend-specialist...`
-- **Ferramentas Utilizadas:** `write_to_file`, `command_status`, `grep_search`, `view_file`, `replace_file_content`, `browser_subagent`, `run_command`
-- **Arquivos Envolvidos:** `index.css`, `Footer.tsx`, `Scripts.tsx`, `index.php`, `Purpose.tsx`, `Schedule.tsx`, `layout.tsx`, `globals.css`, `LocationSection.tsx`, `script.js`, `HeroSlider.tsx`, `CourseGrid.tsx`, `Instagram.tsx`, `header.php`, `page.tsx`, `FAQ.tsx`, `Navbar.tsx`, `footer.php`, `Methodology.tsx`
+- **Ferramentas Utilizadas:** `run_command`, `command_status`, `view_file`, `grep_search`, `write_to_file`, `replace_file_content`, `browser_subagent`
+- **Arquivos Envolvidos:** `Instagram.tsx`, `header.php`, `CourseGrid.tsx`, `Schedule.tsx`, `index.php`, `footer.php`, `page.tsx`, `Purpose.tsx`, `layout.tsx`, `globals.css`, `HeroSlider.tsx`, `FAQ.tsx`, `Methodology.tsx`, `LocationSection.tsx`, `script.js`, `Navbar.tsx`, `Scripts.tsx`, `Footer.tsx`, `index.css`
 
 ### Diálogo
 
@@ -730,8 +774,8 @@
 
 - **Data:** 21/05/2026 17:59
 - **ID da Conversa:** `9c8c278e-acfc-48c7-9b19-239f0fec0da0`
-- **Ferramentas Utilizadas:** `read_url_content`, `write_to_file`, `command_status`, `list_dir`, `grep_search`, `view_file`, `replace_file_content`, `multi_replace_file_content`, `browser_subagent`, `send_command_input`, `run_command`
-- **Arquivos Envolvidos:** `FormularioAgendamento.tsx`, `Footer.tsx`, `server.js`, `FAQAccordion.tsx`, `atualizaçoes do projeto.md`, `005-ui-agendamento-localizacao.md`, `content.md`, `PRD Pagina de Lançamento OBA Gavea.md`, `layout.tsx`, `003-ui-informacoes-cursos.md`, `allchat-03 - Site OBA.md`, `regras de versionamento`, `package.json`, `Acesso Cpanel Napoleon.md`, `TurmaFundadora.tsx`, `globals.css`, `.gitignore`, `Deploy Cpanel Napoleon.md`, `ApresentacaoGavea.tsx`, `MetodologiaDestaque.tsx`, `Regra de Versionamento de Projetos VibeDoCode.md`, `BotaoWhatsAppFixo.tsx`, `PublicoAlvo.tsx`, `SKILL.md`, `004-ui-provas-sociais.md`, `spec.md`, `002-ui-hero-destaques.md`, `ProvasSociais.tsx`, `006-behaviors-tracking.md`, `001-setup-page.md`, `CTAFinal.tsx`, `BarraDestaques.tsx`, `page.tsx`, `CursosVitrine.tsx`, `HeroLancamento.tsx`, `LocalizacaoGavea.tsx`
+- **Ferramentas Utilizadas:** `run_command`, `multi_replace_file_content`, `command_status`, `read_url_content`, `send_command_input`, `view_file`, `grep_search`, `write_to_file`, `replace_file_content`, `list_dir`, `browser_subagent`
+- **Arquivos Envolvidos:** `006-behaviors-tracking.md`, `Regra de Versionamento de Projetos VibeDoCode.md`, `BotaoWhatsAppFixo.tsx`, `004-ui-provas-sociais.md`, `LocalizacaoGavea.tsx`, `HeroLancamento.tsx`, `page.tsx`, `CTAFinal.tsx`, `BarraDestaques.tsx`, `CursosVitrine.tsx`, `Deploy Cpanel Napoleon.md`, `package.json`, `layout.tsx`, `server.js`, `globals.css`, `regras de versionamento`, `ApresentacaoGavea.tsx`, `003-ui-informacoes-cursos.md`, `001-setup-page.md`, `.gitignore`, `PRD Pagina de Lançamento OBA Gavea.md`, `MetodologiaDestaque.tsx`, `002-ui-hero-destaques.md`, `ProvasSociais.tsx`, `SKILL.md`, `content.md`, `Acesso Cpanel Napoleon.md`, `005-ui-agendamento-localizacao.md`, `FormularioAgendamento.tsx`, `atualizaçoes do projeto.md`, `FAQAccordion.tsx`, `TurmaFundadora.tsx`, `spec.md`, `PublicoAlvo.tsx`, `Footer.tsx`, `allchat-03 - Site OBA.md`
 
 ### Diálogo
 
@@ -1161,8 +1205,8 @@
 
 - **Data:** 25/05/2026 16:50
 - **ID da Conversa:** `2f3a08fa-7301-4581-84f1-2d6469fd3c14`
-- **Ferramentas Utilizadas:** `write_to_file`, `command_status`, `list_dir`, `grep_search`, `view_file`, `replace_file_content`, `multi_replace_file_content`, `send_command_input`, `run_command`
-- **Arquivos Envolvidos:** `Footer.tsx`, `allchat-03 - Site OBA.md`, `package.json`, `senhas de acesso ssh napoleon.md`, `Acesso Cpanel Napoleon.md`, `.gitignore`, `timeline Projeto OBA.md`, `Deploy Cpanel Napoleon.md`, `coolify.md`, `atualizaçoes do projeto.md`, `get_oba_app.py`, `site-institutional.ts`, `Schedule.tsx`, `config`
+- **Ferramentas Utilizadas:** `multi_replace_file_content`, `run_command`, `command_status`, `send_command_input`, `view_file`, `grep_search`, `write_to_file`, `replace_file_content`, `list_dir`
+- **Arquivos Envolvidos:** `Acesso Cpanel Napoleon.md`, `Footer.tsx`, `timeline Projeto OBA.md`, `atualizaçoes do projeto.md`, `.gitignore`, `config`, `senhas de acesso ssh napoleon.md`, `Deploy Cpanel Napoleon.md`, `package.json`, `get_oba_app.py`, `coolify.md`, `Schedule.tsx`, `site-institutional.ts`, `allchat-03 - Site OBA.md`
 
 ### Diálogo
 
