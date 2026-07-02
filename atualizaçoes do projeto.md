@@ -1,3 +1,4 @@
+- V1.02.00: Lançamento do módulo de Lanche Coletivo de Festa Junina 2026 (Unidade Tijuca) com formulário público de etapas, resumo público dinâmico por turma e painel interno de respostas protegido por senha.
 - V1.01.05: Ajustes de horários. Adicionada turma de quarta-feira na Tijuca (17h-19h). Removido domingo e aula avulsa de sábado na Gávea.
 - V1.01.04: Integração de formulário com opção de "Agendar Aula Experimental" e popover do WhatsApp flutuante individualizado por unidade (Méier, Tijuca e Gávea).
 - V1.01.03: Seletor dinâmico de unidades no formulário de contato (WhatsApp/E-mail personalizados) e botões "Fale com OBA" individualizados por unidade.

@@ -171,7 +171,7 @@ export function Footer() {
           </div>
 
           <div className="copyright">
-            <p>&copy; 2026 Oficina Belas Artes. Todos os direitos reservados. <span style={{ opacity: 0.5, fontSize: "0.85em", fontFamily: "monospace", marginLeft: "10px" }}>V1.01.05</span></p>
+            <p>&copy; 2026 Oficina Belas Artes. Todos os direitos reservados. <span style={{ opacity: 0.5, fontSize: "0.85em", fontFamily: "monospace", marginLeft: "10px" }}>V1.02.00</span></p>
             <div className="footer-dev-info">
               <p className="creator">Criado por <a href="https://www.olamundodigital.com.br" target="_blank" rel="noopener noreferrer" className="omd-link">
                 <img src="/images/logo-olamundodigital.png" alt="OMD" className="omd-mini-logo" /> OláMundoDigital
