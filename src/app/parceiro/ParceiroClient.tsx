@@ -63,7 +63,7 @@ function FormContent() {
     const lines = [
       'Olá! Quero garantir a matrícula gratuita e agendar a aula experimental da OBA.',
       '',
-      `Criança: ${data.childName} (${data.childAge} anos)`,
+      `Nome: ${data.childName} (${data.childAge} anos)`,
       `Responsável: ${data.parentName}`,
       `WhatsApp: ${data.whats}`,
       `Unidade: ${data.unit}`,
@@ -81,7 +81,7 @@ function FormContent() {
   const handleCopy = async () => {
     const data = {
       ...formData,
-      childName: formData.childName.trim() || '[nome da criança]',
+      childName: formData.childName.trim() || '[nome]',
       childAge: formData.childAge.trim() || '[idade]',
       parentName: formData.parentName.trim() || '[responsável]',
       whats: sanitizePhone(formData.whats) || '[whatsapp]',
@@ -127,11 +127,10 @@ function FormContent() {
           <div className="partner-copy reveal reveal-up active">
             <h1>Página exclusiva para parceiros OBA</h1>
             <p>
-              Se você escaneou o QR Code em um de nossos parceiros, esta condição é para você:
-              <strong> matrícula 100% gratuita</strong> e <strong>aula experimental inclusa</strong>.
+              Se você escaneou o QR Code em um de nossos parceiros, esta página é para você!
             </p>
             <div className="partner-badges">
-              <span className="partner-badge"><i className="fas fa-gift"></i> Matrícula gratuita</span>
+              <span className="partner-badge"><i className="fas fa-gift"></i> Aula experimental grátis</span>
               <span className="partner-badge"><i className="fas fa-pencil-alt"></i> A partir de 6 anos</span>
               <span className="partner-badge"><i className="fas fa-map-marker-alt"></i> Méier, Tijuca e Gávea</span>
             </div>
@@ -140,8 +139,7 @@ function FormContent() {
 
           <div className="partner-image-wrap reveal reveal-up active">
             <picture>
-              <source srcSet="/images/matriculagratis.webp" type="image/webp" />
-              <img src="/images/matriculagratis.png" alt="Matrícula gratuita na Oficina Belas Artes" width={640} height={640} loading="eager" />
+              <img src="/images/aula-experimental-gratis.jpg" alt="Aula experimental grátis na Oficina Belas Artes" width={640} height={640} loading="eager" />
             </picture>
           </div>
         </div>
@@ -185,7 +183,7 @@ function FormContent() {
             <form id="leadForm" className="partner-form" autoComplete="on" onSubmit={handleSubmit}>
               <div className="field-grid">
                 <div className="field">
-                  <label htmlFor="childName">Nome da criança</label>
+                  <label htmlFor="childName">Nome</label>
                   <input id="childName" name="childName" placeholder="Ex.: Ana Clara" required value={formData.childName} onChange={handleChange} />
                 </div>
                 <div className="field">
