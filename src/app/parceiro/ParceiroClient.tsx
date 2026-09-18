@@ -44,11 +44,11 @@ function FormContent() {
     setFormData(prev => ({
       ...prev,
       restaurant: restaurant,
-      unit: ["Tijuca", "Méier", "Outra/Quero entender"].includes(unit) ? unit : "",
+      unit: ["Tijuca", "Méier", "Gávea", "Outra/Quero entender"].includes(unit) ? unit : "",
       utm: utm
     }));
 
-    const genericMessage = 'Olá! Peguei a folha de colorir no restaurante parceiro e quero informações sobre matrícula gratuita + aula experimental da OBA.';
+    const genericMessage = 'Olá! Peguei a folha de colorir em um de nossos parceiros e quero informações sobre matrícula gratuita + aula experimental da OBA.';
     setGenericLink(`https://wa.me/${DEFAULT_WHATSAPP_NUMBER}?text=${encodeURIComponent(genericMessage)}`);
   }, [searchParams]);
 
@@ -67,7 +67,7 @@ function FormContent() {
       `Responsável: ${data.parentName}`,
       `WhatsApp: ${data.whats}`,
       `Unidade: ${data.unit}`,
-      data.restaurant ? `Restaurante parceiro: ${data.restaurant}` : null,
+      data.restaurant ? `Parceiro: ${data.restaurant}` : null,
       data.notes ? `Observação: ${data.notes}` : null,
       data.utm ? `UTM: ${data.utm}` : null,
       `Origem: ${data.source}`,
@@ -127,13 +127,13 @@ function FormContent() {
           <div className="partner-copy reveal reveal-up active">
             <h1>Página exclusiva para parceiros OBA</h1>
             <p>
-              Se você escaneou o QR Code no restaurante parceiro, esta condição é para você:
+              Se você escaneou o QR Code em um de nossos parceiros, esta condição é para você:
               <strong> matrícula 100% gratuita</strong> e <strong>aula experimental inclusa</strong>.
             </p>
             <div className="partner-badges">
               <span className="partner-badge"><i className="fas fa-gift"></i> Matrícula gratuita</span>
               <span className="partner-badge"><i className="fas fa-pencil-alt"></i> A partir de 6 anos</span>
-              <span className="partner-badge"><i className="fas fa-map-marker-alt"></i> Méier e Tijuca</span>
+              <span className="partner-badge"><i className="fas fa-map-marker-alt"></i> Méier, Tijuca e Gávea</span>
             </div>
             <a href="#form" className="btn btn-primary btn-lg">Quero garantir minha vaga</a>
           </div>
@@ -150,7 +150,7 @@ function FormContent() {
       <section className="partner-content section-padding">
         <div className="container partner-layout">
           <article className="partner-card reveal reveal-up active">
-            <h2>Por que a OBA funciona para crianças?</h2>
+            <h2>Por que a OBA funciona?</h2>
             <p>Aulas práticas com metodologia por faixa etária, focadas no desenvolvimento artístico e pessoal.</p>
 
             <div className="partner-benefits">
@@ -177,7 +177,7 @@ function FormContent() {
             <h2>Garanta a matrícula gratuita agora</h2>
             <p id="restaurantHint">
               {formData.restaurant 
-                ? <>Detectamos o restaurante parceiro: <strong>{formData.restaurant}</strong>. Complete para reservar sua matrícula gratuita.</>
+                ? <>Detectamos o parceiro: <strong>{formData.restaurant}</strong>. Complete para reservar sua matrícula gratuita.</>
                 : "Preencha em menos de 1 minuto. Você finaliza o agendamento no WhatsApp."
               }
             </p>
@@ -212,12 +212,13 @@ function FormContent() {
                     <option value="" disabled>Selecione</option>
                     <option value="Tijuca">Tijuca</option>
                     <option value="Méier">Méier</option>
+                    <option value="Gávea">Gávea</option>
                     <option value="Outra/Quero entender">Outra / Quero entender</option>
                   </select>
                 </div>
                 <div className="field">
-                  <label htmlFor="restaurant">Restaurante parceiro</label>
-                  <input id="restaurant" name="restaurant" placeholder="Ex.: Nome do restaurante" value={formData.restaurant} onChange={handleChange} />
+                  <label htmlFor="restaurant">Nome do Parceiro</label>
+                  <input id="restaurant" name="restaurant" placeholder="Ex.: Nome do parceiro" value={formData.restaurant} onChange={handleChange} />
                 </div>
               </div>
 

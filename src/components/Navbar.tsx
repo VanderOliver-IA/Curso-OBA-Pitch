@@ -34,7 +34,7 @@ export function Navbar() {
               <li><Link href="/cursos/comunicacao-visual"><i className="fas fa-bullhorn"></i> Com. Visual</Link></li>
             </ul>
           </li>
-          <li><Link href="/parceiro" className="nav-item">Parceiro</Link></li>
+          <li><Link href="/parceiro" className="nav-item">Parceiros</Link></li>
           <li><Link href="/#localizacao" className="nav-item">Unidades</Link></li>
         </ul>
         <a href="/#localizacao" className="btn btn-primary desktop-cta">Agendar Aula Experimental</a>

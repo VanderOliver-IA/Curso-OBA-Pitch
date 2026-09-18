@@ -90,7 +90,7 @@ export function Footer() {
           </Link>
           <Link href="/parceiro" className="app-item">
             <i className="fas fa-handshake"></i>
-            <span>Parceiro</span>
+            <span>Parceiros</span>
           </Link>
         </div>
 
@@ -164,7 +164,7 @@ export function Footer() {
                 <li><Link href="/#proposito">Propósito</Link></li>
                 <li><Link href="/#metodologia">Metodologia</Link></li>
                 <li><Link href="/#cursos">Cursos</Link></li>
-                <li><Link href="/parceiro">Parceiro</Link></li>
+                <li><Link href="/parceiro">Parceiros</Link></li>
                 <li><Link href="/#localizacao">Agendar Aula</Link></li>
               </ul>
             </div>
