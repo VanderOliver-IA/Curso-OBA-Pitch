@@ -20,7 +20,7 @@ export function Instagram() {
           <iframe 
             src="https://snapwidget.com/embed/1117800" 
             className="snapwidget-widget" 
-            allowTransparency={true} 
+            allowtransparency="true" 
             frameBorder="0" 
             scrolling="no" 
             style={{ border: "none", overflow: "hidden", width: "100%", height: "400px" }} 

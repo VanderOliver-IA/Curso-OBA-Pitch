@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function Scripts() {
+  const pathname = usePathname();
+
   useEffect(() => {
     // --- 1. Reveal on Scroll (Intersection Observer) ---
     const reveals = document.querySelectorAll('.reveal');
@@ -64,6 +67,7 @@ export function Scripts() {
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
+    // Trigger scroll immediately to set initial positions
     handleScroll();
 
     return () => {
@@ -71,7 +75,7 @@ export function Scripts() {
       window.removeEventListener('scroll', onScroll);
       revealObserver.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

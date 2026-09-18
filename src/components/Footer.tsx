@@ -154,6 +154,11 @@ export function Footer() {
                 <p>R. Maj. Ávila, 371<br />Tijuca - RJ</p>
                 <p className="footer-phone"><i className="fab fa-whatsapp"></i> (21) 96726-1725</p>
               </div>
+              <div className="unit-info">
+                <h5><i className="fas fa-map-marker-alt"></i> Gávea</h5>
+                <p>Marquês de São Vicente, 52<br />Loja n14, Gávea - RJ</p>
+                <p className="footer-phone"><i className="fab fa-whatsapp"></i> (21) 97464-3331</p>
+              </div>
             </div>
 
             {/* Quick Links Card */}
